@@ -13,6 +13,8 @@
 #import "LoginViewController.h"
 #import "UserProfile.h"
 #import "HelpViewController.h"
+#import "AppDelegate.h"
+#import <coredata/coredata.h>
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -25,11 +27,12 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *helpButton;
 @property (weak, nonatomic) IBOutlet UISwitch *autoLoginSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *enableTouchIDSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *enableTouchIDSwitch;
 
 @end
 
 @implementation LoginViewController
+
 
 
 - (void)viewDidLoad {
@@ -37,7 +40,8 @@
     NSLog(@"its login screen");
     [LearningMethods dismissKeyboardWhenPressed:self.view];
     self.navigationController.navigationBarHidden = YES;
-    
+    [_autoLoginSwitch addTarget:self action:@selector(autoLoginEnabled) forControlEvents:UIControlEventValueChanged];
+    [_enableTouchIDSwitch addTarget:self action:@selector(touchIDEnabled) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,6 +115,27 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma UISwitch validations
+
+-(void)autoLoginEnabled{
+    if (_autoLoginSwitch.on==YES) {
+        _enableTouchIDSwitch.enabled=NO;
+    }else{
+    _enableTouchIDSwitch.enabled=YES;
+    }
+}
+-(void)touchIDEnabled{
+    if (_enableTouchIDSwitch.on==YES) {
+        _autoLoginSwitch.enabled=NO;
+
+    } else {
+        _autoLoginSwitch.enabled=YES;
+
+    }
+    }
+
+#pragma LoginValidations
 
 -(BOOL)validateFields{
     if ([self.usernameField.text isEqualToString:@""]) {
@@ -197,10 +222,76 @@
     //[self validateFields];
     //[self validateLogin];
     //[self LoginToApp];
+    [self storeUserPreferences];
+    [self fetchResults];
     UIStoryboard * homeScreenStoryBoard = [UIStoryboard storyboardWithName:@"HomeScreenStoryBoard" bundle:nil];
     UIViewController *homeViewController = [homeScreenStoryBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
     [self.navigationController pushViewController:homeViewController animated:YES];
 
+}
+
+
+/*
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+*/
+
+-(void)storeUserPreferences{
+   // NSManagedObjectContext *con = [self managed]
+    //NSManagedObjectContext *context = self.managedObjectContext;
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSManagedObject *objectToSave = [NSEntityDescription insertNewObjectForEntityForName:@"UserAttributes" inManagedObjectContext:context];
+    
+    [objectToSave setValue:@"vesnkat" forKey:@"username"];
+    if(_autoLoginSwitch.on ==YES){
+        [objectToSave setValue:[NSNumber numberWithBool:YES] forKey:@"autoLogin"];
+    }else{
+    [objectToSave setValue:[NSNumber numberWithBool:NO] forKey:@"autoLogin"];
+    }
+    if(self.enableTouchIDSwitch.on==YES){
+        [objectToSave setValue:[NSNumber numberWithBool:YES] forKey:@"enableTouchID"];
+    }else{
+        [objectToSave setValue:[NSNumber numberWithBool:NO] forKey:@"enableTouchID"];
+    }
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    else{
+        NSLog(@"Yeppie , I learnt core data");
+    }
+    
+}
+
+-(void)fetchResults {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"UserAttributes" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+  /*  // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
+                                                                   ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+    */
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        NSLog(@"This is empty");
+    }
+    NSLog(@"This is the row count %lu",(unsigned long)fetchedObjects.count);
+    
 }
 
 - (IBAction)signUpButton:(id)sender {

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface LoginViewController : UITableViewController
+@interface LoginViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+
+@property(strong,nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
