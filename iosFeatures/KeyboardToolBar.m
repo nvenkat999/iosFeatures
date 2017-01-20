@@ -176,7 +176,7 @@
     CGRect frameToScroll = [self.mainScrollView convertRect:textField.frame fromView:textField.superview];
     [self scrollRectToVisible:frameToScroll animated:YES];
     
-    NSUInteger index = [self.inputFields indexOfObject:textField];
+    //NSUInteger index = [self.inputFields indexOfObject:textField];
  /* if ([self.inputFieldsDelegates[index] respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [self.inputFieldsDelegates[index] textFieldDidBeginEditing:textField];
     } */
