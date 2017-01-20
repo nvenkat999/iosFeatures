@@ -7,6 +7,9 @@
 //
 
 #import "ScanBarcodeViewController.h"
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ScanBarcodeViewController ()
 
