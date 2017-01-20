@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJr-nS-bOe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,7 +43,7 @@
                                     </state>
                                     <connections>
                                         <action selector="signUpButton:" destination="dJr-nS-bOe" eventType="touchUpInside" id="idu-FD-Xce"/>
-                                        <segue destination="O8H-6T-kcM" kind="show" id="UY0-xj-55j"/>
+                                        <segue destination="O8H-6T-kcM" kind="presentation" id="Jxu-lp-qGk"/>
                                     </connections>
                                 </button>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DcI-el-X04">
@@ -176,6 +176,7 @@
                             <outlet property="delegate" destination="dJr-nS-bOe" id="z0X-6c-cZk"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="hHk-7X-NVc"/>
                     <connections>
                         <outlet property="autoLoginSwitch" destination="DcI-el-X04" id="Vcf-aL-HXO"/>
                         <outlet property="enableTouchIDSwitch" destination="mOQ-Dt-PnV" id="L8Y-EU-Kxj"/>
@@ -185,12 +186,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcJ-HN-e1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.625" y="8.4507042253521121"/>
+            <point key="canvasLocation" x="242.40000000000001" y="7.6461769115442282"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qRP-o9-rsX">
             <objects>
-                <tableViewController id="O8H-6T-kcM" customClass="SignUpViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O8H-6T-kcM" customClass="SignUpViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Iav-OQ-eSh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,6 +259,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="O8H-6T-kcM" id="pHW-1Q-gpb"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -282,6 +286,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="O8H-6T-kcM" id="ful-XN-EMH"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -304,6 +311,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Iav-OQ-eSh" id="Ha5-T6-CtN"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -326,6 +336,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="HeA-QZ-xaK" id="EwQ-cH-k13"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -392,6 +405,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="dcC-7d-aTF" id="Xnj-MV-YKe"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -422,7 +438,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0q-mQ-syS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146.25" y="14.788732394366198"/>
+            <point key="canvasLocation" x="1084" y="13.943028485757123"/>
         </scene>
     </scenes>
 </document>

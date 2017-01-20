@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LearningMethods : UIViewController<UIGestureRecognizerDelegate>
+@interface LearningMethods : UIViewController<UIGestureRecognizerDelegate,UIAlertViewDelegate>
 
 +(void)dismissKeyboardWhenPressed:(UIView *)sampleView;
 +(void)showUIAlertMessage:(NSString *)message andWithTitle:(NSString *)title andInView:(UIViewController *)presentView;

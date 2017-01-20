@@ -53,4 +53,11 @@
     [presentView presentViewController:alert animated:YES completion:nil];
 }
 
++(void)showUIAlertMessage:(NSString *)message andWithTitle:(NSString *)title {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){}];
+    [alert addAction:defaultAction];
+    //[self presentViewController:alertDisplay animated:YES completion:Nil];
+}
+
 @end

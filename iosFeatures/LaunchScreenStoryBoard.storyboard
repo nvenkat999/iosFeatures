@@ -28,7 +28,7 @@
         <!--Launch Screen View Controller-->
         <scene sceneID="5Mk-7n-Cut">
             <objects>
-                <viewController id="cQH-PK-R8h" customClass="LaunchScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreenViewController" id="cQH-PK-R8h" customClass="LaunchScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x3b-ZE-hUs"/>
                         <viewControllerLayoutGuide type="bottom" id="6kz-gn-Jpg"/>
