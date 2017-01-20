@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface LaunchScreenViewController : ViewController
+
+@property (strong,nonatomic) IBOutlet NSManagedObject * fetchedResult;
 
 @end

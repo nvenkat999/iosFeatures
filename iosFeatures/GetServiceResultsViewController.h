@@ -18,4 +18,11 @@
 @property (nonatomic, strong) IBOutlet UISearchBar *testSearchBar;
 @property (nonatomic, strong) IBOutlet UITableView *atableView;
 
+@property (nonatomic,strong) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic,strong) UIView *activityIndicatorView;
+@property (nonatomic,strong) UIView *backGroundView;
+@property (nonatomic,strong) UILabel *testLabel;
+
+
+
 @end

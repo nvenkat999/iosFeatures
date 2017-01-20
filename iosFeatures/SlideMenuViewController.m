@@ -142,9 +142,10 @@ NSArray * menu;
     //[self.revealViewController rightRevealToggle:sender];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Do you really want to logout" preferredStyle:UIActionSheetStyleDefault];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        UIStoryboard * homeScreenStoryBoard = [UIStoryboard storyboardWithName:@"LoginStoryBoard" bundle:nil];
-        UIViewController *homeViewController = [homeScreenStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        [self.navigationController pushViewController:homeViewController animated:YES];
+        UIStoryboard * loginScreenStoryBoard = [UIStoryboard storyboardWithName:@"LoginStoryBoard" bundle:nil];
+        UIViewController *loginViewController = [loginScreenStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        //[self.navigationController pushViewController:loginViewController animated:YES];
+        [self presentViewController:loginViewController animated:YES completion:nil];
     }];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
             

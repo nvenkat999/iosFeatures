@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UITableViewController
+@interface SignUpViewController : UITableViewController<UITextViewDelegate,UITextFieldDelegate>
+
+- (id)initWithTextFieldsCollection:(NSArray*)textFieldsCollection;
+//@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFieldsCollection;
+@property (weak,nonatomic) UITextField *activeTextField;
+@property (strong, nonatomic) NSArray *inputFields;
+
+@property (strong, nonatomic) NSArray *inputFieldsDelegates;
+
+
+
 
 @end

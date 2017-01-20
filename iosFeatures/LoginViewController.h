@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <LocalAuthentication/LocalAUthentication.h>
 
-@interface LoginViewController : UITableViewController<NSFetchedResultsControllerDelegate>
+@interface LoginViewController : UITableViewController<NSFetchedResultsControllerDelegate, UITextFieldDelegate,UITextViewDelegate>
 
 @property(strong,nonatomic) NSManagedObjectContext *managedObjectContext;
+@property(strong,nonatomic) NSString *useTouchID;
+@property  UIActivityIndicatorView *activityIndicator;
 
 @end

@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
 #import "GetServiceViewController.h"
+#import "AppDelegate.h"
+#import "ImageViewController.h"
 
 @interface HomeViewController ()
 
@@ -18,10 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBarHidden = NO;
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(rightRevealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToRootViewControllerAnimated) name:@"popToRoot" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,9 +32,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row==0) {
+    if (indexPath.row==1) {
         NSLog(@"This is first row");
         UIViewController *getServiceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GetServiceViewController"];
         [self.navigationController pushViewController:getServiceViewController animated:YES];
@@ -41,14 +44,16 @@
         //[segue perform];
     }
 }
+*/
 
-/*
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"GetServiceList"]) {
-        GetServiceViewController *getServiceView = [segue ];
-        
-    }
-} */
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([[segue identifier] isEqualToString:@"takePhotoSegue"]) {
+//        ImageViewController *imageView = [segue.destinationViewController];
+//        //self.navigationController
+//        
+//        
+//    }
+//}
 
 #pragma mark - Table view data source
 /*
@@ -114,5 +119,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)popToRootViewControllerAnimated
+{
+    UIStoryboard * launchStoryBoard = [UIStoryboard storyboardWithName:@"LaunchScreenStoryBoard" bundle:nil];
+    UIViewController * launchView = [launchStoryBoard instantiateViewControllerWithIdentifier:@"LaunchScreenViewController"];
+    [self.navigationController pushViewController:launchView animated:YES];
+    //[self.navigationController presentViewController:launchView animated:YES completion:nil];
+}
 
 @end

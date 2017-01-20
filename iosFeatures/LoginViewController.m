@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LaunchScreenViewController.h"
 #import "LearningMethods.h"
 #import "SqlLiteDatabaseMethods.h"
 #import "sqlite3.h"
@@ -15,12 +16,20 @@
 #import "HelpViewController.h"
 #import "AppDelegate.h"
 #import <coredata/coredata.h>
+#import <LocalAuthentication/LocalAUthentication.h>
+#import "KeyboardToolBar.h"
+#import <uikit/uikit.h>
+#import "MBProgressHUD.h"
+#import <QuartzCore/QuartzCore.h>
+#import "SignUpViewController.h"
+
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong,nonatomic) NSMutableArray *loginUserData;
+
 - (IBAction)signUpButton:(id)sender;
 - (IBAction)loginButton:(id)sender;
 - (IBAction)helpButton:(id)sender;
@@ -42,6 +51,24 @@
     self.navigationController.navigationBarHidden = YES;
     [_autoLoginSwitch addTarget:self action:@selector(autoLoginEnabled) forControlEvents:UIControlEventValueChanged];
     [_enableTouchIDSwitch addTarget:self action:@selector(touchIDEnabled) forControlEvents:UIControlEventValueChanged];
+    if ([_useTouchID  isEqual:@"YES"]) {
+        [self useTouchID];
+        [_useTouchID isEqual:@"NO"];
+    }
+    //KeyboardToolBar *toolbar = [KeyboardToolBar keyBoardToolBar];
+   // toolbar.mainScrollView = self.view;
+   // toolbar.inputFields = @[self.usernameField,self.passwordField];
+    //_usernameField.delegate=self;
+    //_passwordField.delegate =self;
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,7 +143,7 @@
 }
 */
 
-#pragma UISwitch validations
+#pragma mark UISwitch validations
 
 -(void)autoLoginEnabled{
     if (_autoLoginSwitch.on==YES) {
@@ -135,20 +162,21 @@
     }
     }
 
-#pragma LoginValidations
+#pragma mark LoginValidations
 
 -(BOOL)validateFields{
-    if ([self.usernameField.text isEqualToString:@""]) {
-        [LearningMethods showUIAlertMessage:@"Username Cannot be blank" andWithTitle:@"Error" andInView:self.navigationController];
-        return  NO;
-    }
-    else if ([self.passwordField.text isEqualToString:@""]) {
-        [LearningMethods showUIAlertMessage:@"Password Cannot be blank" andWithTitle:@"Error" andInView:self.navigationController];
-        return  NO;
-    }
-    else{
+//    if ([self.usernameField.text isEqualToString:@""]) {
+//        [LearningMethods showUIAlertMessage:@"Username Cannot be blank" andWithTitle:@"Error" andInView:self.navigationController];
+//        return  NO;
+//    }
+//    else if ([self.passwordField.text isEqualToString:@""]) {
+//        [LearningMethods showUIAlertMessage:@"Password Cannot be blank" andWithTitle:@"Error" andInView:self.navigationController];
+//        return  NO;
+//    }
+//    else{
+//    return YES;
+//    }
     return YES;
-    }
 }
 
 -(void)validateLogin{
@@ -219,15 +247,27 @@
 }
 
 - (IBAction)loginButton:(id)sender {
-    //[self validateFields];
+    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        
+    
+        if ([self validateFields]){
     //[self validateLogin];
     //[self LoginToApp];
+    //[self deleteUserPreferences];
     [self storeUserPreferences];
-    [self fetchResults];
+    //[self fetchResults];
+        //sleep(5);
     UIStoryboard * homeScreenStoryBoard = [UIStoryboard storyboardWithName:@"HomeScreenStoryBoard" bundle:nil];
     UIViewController *homeViewController = [homeScreenStoryBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-    [self.navigationController pushViewController:homeViewController animated:YES];
-
+    [self presentViewController:homeViewController animated:YES completion:nil];
+     
+        
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
+    });
 }
 
 
@@ -247,9 +287,10 @@
     //NSManagedObjectContext *context = self.managedObjectContext;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
     NSManagedObject *objectToSave = [NSEntityDescription insertNewObjectForEntityForName:@"UserAttributes" inManagedObjectContext:context];
     
-    [objectToSave setValue:@"vesnkat" forKey:@"username"];
+    [objectToSave setValue:self.usernameField.text forKey:@"username"];
     if(_autoLoginSwitch.on ==YES){
         [objectToSave setValue:[NSNumber numberWithBool:YES] forKey:@"autoLogin"];
     }else{
@@ -260,47 +301,120 @@
     }else{
         [objectToSave setValue:[NSNumber numberWithBool:NO] forKey:@"enableTouchID"];
     }
+    [objectToSave setValue:[NSDate date] forKey:@"lastLoggedIn"];
     NSError *error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
     else{
-        NSLog(@"Yeppie , I learnt core data");
+        NSLog(@"Yeppie , I learned core data");
     }
     
 }
 
+-(void)deleteUserPreferences{
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"UserAttributes"];
+    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc]initWithFetchRequest:request];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    NSPersistentStoreCoordinator *myPersistentStoreCoordinator = [appDelegate persistentStoreCoordinator];
+    NSError  *error= nil;
+    [myPersistentStoreCoordinator executeRequest:delete withContext:context error:&error];
+}
+
+/*
 -(void)fetchResults {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"UserAttributes" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
-  /*  // Specify criteria for filtering which objects to fetch
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"<#format string#>", <#arguments#>];
-    [fetchRequest setPredicate:predicate];
+    // Specify criteria for filtering which objects to fetch
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"limit=1"];
+    //[fetchRequest setPredicate:predicate];
     // Specify how the fetched objects should be sorted
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"<#key#>"
-                                                                   ascending:YES];
+    [fetchRequest setFetchLimit:1];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastLoggedIn"
+                                                                   ascending:NO];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
-    */
+    
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects == nil) {
         NSLog(@"This is empty");
+    }else{
+        NSManagedObject *fetchedResult = [fetchedObjects objectAtIndex:0];
+        NSString * text= [fetchedResult valueForKey:@"username"];
+        NSData *dates=[fetchedResult valueForKey:@"lastLoggedIn"];
+        NSLog(@"%@ logged in at %@",text,dates);
     }
-    NSLog(@"This is the row count %lu",(unsigned long)fetchedObjects.count);
-    
+
 }
 
+*/
+
 - (IBAction)signUpButton:(id)sender {
+   // UIViewController *signUpView = [self.storyboard instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+   // [self.navigationController pushViewController:signUpView animated:YES];
 }
 
 - (IBAction)helpButton:(id)sender {
     
+}
+    
+#pragma mark TouchID Functionality
 
+-(void)useTouchID{
+    
+    LAContext *authContext = [[LAContext alloc]init];
+    NSError *authError= nil;
+    NSString *authString = @"Logging in via TouchID";
+    if ([authContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        [authContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:authString reply:^(BOOL success, NSError * error) {
+            
+            if (success) {
+                
+                UIStoryboard * homeScreenStoryBoard = [UIStoryboard storyboardWithName:@"HomeScreenStoryBoard" bundle:nil];
+                UIViewController *homeViewController = [homeScreenStoryBoard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                [self presentViewController:homeViewController animated:YES completion:nil];
+                //[self.navigationController pushViewController:homeViewController animated:YES];
+                //[_activityIndicator startAnimating];
+               // [_activityIndicator stopAnimating];
+                
+            } else {
+                [LearningMethods showUIAlertMessage:@"Cannot regognize touch, please ogin manually" andWithTitle:@"Error" andInView:self.navigationController];
+                //[_activityIndicator stopAnimating];
+            }
+        }];
+    }
+         else{
+             NSLog(@"Sorry,you do not have touch ID feature");
+         }
     
 }
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    NSLog(@"Text field edidting begin");
+    //_activeTextField = textField;
+    
+   // KeyboardToolBar * toolBar = (KeyboardToolBar *)[[UIApplication sharedApplication]delegate];
+   //[toolBar setInputAccessoryViewForTextField:textField];
+    //[KeyboardToolBar setInputAccessoryViewForTextField:<#(UITextField *)#>]
+    // [KeyboardToolBar setInputAccessoryViewForTextField:textField];
+}
+
+
+-(void)setActivityIndicator{
+    _activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _activityIndicator.frame = CGRectMake(0.0, 0.0, 400.0, 420.0);
+    _activityIndicator.center = self.view.center;
+    [self.view addSubview:_activityIndicator];
+    [_activityIndicator bringSubviewToFront:self.view];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
+    
+}
+
 
 @end
