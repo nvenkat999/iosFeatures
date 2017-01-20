@@ -3,9 +3,10 @@
     <entity name="UserAttributes" representedClassName="" syncable="YES">
         <attribute name="autoLogin" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="enableTouchID" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastLoggedIn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserAttributes" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="UserAttributes" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
