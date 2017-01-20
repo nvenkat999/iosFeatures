@@ -7,7 +7,7 @@
 //
 
 #import "GetServiceViewController.h"
-#import "GetServiceResultsViewController.h"
+#import "GetServiceResultViewController.h"
 #import "SWRevealViewController.h"
 
 @interface GetServiceViewController ()
@@ -59,7 +59,7 @@
     
     if ([[segue identifier] isEqualToString:@"GetServiceResults"]) {
         
-        GetServiceResultsViewController *serviceResultsList = [segue destinationViewController];
+        GetServiceResultViewController *serviceResultsList = [segue destinationViewController];
         
         NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
         

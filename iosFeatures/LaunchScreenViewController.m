@@ -97,7 +97,7 @@
     
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    if ([fetchedObjects count] == nil) {
+    if ([fetchedObjects count] == 0) {
         NSLog(@"Fetch Object is empty");
     }else{
         
