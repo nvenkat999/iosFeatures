@@ -24,6 +24,8 @@
 @property AVCaptureDeviceInput *deviceInput;
 @property AVCapturePhotoSettings *imageSettings;
 
+
+
 @end
 
 @implementation CustomCameraViewController

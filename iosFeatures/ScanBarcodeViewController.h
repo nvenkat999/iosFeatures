@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ScanBarcodeViewController : ViewController
+@interface ScanBarcodeViewController : ViewController<AVCapturePhotoCaptureDelegate, NSMetadataQueryDelegate>
 
 @end
