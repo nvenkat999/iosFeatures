@@ -32,19 +32,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row==1) {
-        NSLog(@"This is first row");
-        UIViewController *getServiceViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GetServiceViewController"];
-        [self.navigationController pushViewController:getServiceViewController animated:YES];
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row==0) {
+        if (indexPath.section == 2)
+         {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MapsStoryBoard" bundle:nil];
+        UIViewController *mapViewController = [storyBoard instantiateViewControllerWithIdentifier:@"MapViewController"];
+        [self.navigationController pushViewController:mapViewController animated:YES];
+        
         //SWRevealViewControllerSeguePushController *segue = [[SWRevealViewControllerSeguePushController alloc] initWithIdentifier:@"test" source:self destination:getServiceViewController];
         //SWRevealViewControllerSeguePushController *segue
         //[segue perform];
+         }
+       
+    }
+    else if (indexPath.row==2){
+        if (indexPath.section ==2) {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"AppPurchasesStoryBoard" bundle:nil];
+            UIViewController *purchaseViewController = [storyBoard instantiateViewControllerWithIdentifier:@"AppPurchaseViewController"];
+            [self.navigationController pushViewController:purchaseViewController animated:YES];
+        }
     }
 }
-*/
+
 
 //-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 //    if ([[segue identifier] isEqualToString:@"takePhotoSegue"]) {
