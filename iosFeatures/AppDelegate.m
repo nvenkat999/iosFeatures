@@ -49,7 +49,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     if(self.backgroundSentTime){
-        BOOL isTimedout =[self.backgroundSentTime timeIntervalSinceNow] <= -(1 * 5);
+        BOOL isTimedout =[self.backgroundSentTime timeIntervalSinceNow] <= -(1 * 60);
         if(isTimedout){
             NSLog(@"timeout");
             [[NSNotificationCenter defaultCenter] postNotificationName:@"popToRoot" object:nil];
