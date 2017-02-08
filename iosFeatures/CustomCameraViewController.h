@@ -25,6 +25,7 @@
 @property (weak,nonatomic) IBOutlet UIButton *cancelImageButton;
 @property (weak,nonatomic) IBOutlet UIImageView *captureImageView;
 @property (strong,nonatomic)IBOutlet UIImage *imageCaptured;
+@property ( nonatomic) IBOutlet UIView *toastView;
 
 
 -(UIButton *)createButton:(CGRect)frame image:(NSString *)imageName action:(SEL)action parentView:(UIView*)parentView;

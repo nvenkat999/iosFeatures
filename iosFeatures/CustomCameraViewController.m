@@ -15,6 +15,7 @@
 #import <MessageUI/MessageUI.h>
 #import "LearningMethods.h"
 #import "MBProgressHUD.h"
+#import <UIKit/UIKit.h>
 
 @interface CustomCameraViewController ()
 
@@ -25,19 +26,19 @@
 @property AVCapturePhotoSettings *imageSettings;
 
 
-
 @end
 
-@implementation CustomCameraViewController
 
+@implementation CustomCameraViewController
+@synthesize toastView;
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _captureImageButton.layer.cornerRadius = 35 ;
-    _captureImageButton.opaque = false;
+//    float width = _captureImageButton.frame.size.height/2;
+//    _captureImageButton.layer.cornerRadius = width ;
+//    _captureImageButton.opaque = false;
     
     // Do any additional setup after loading the view.
 }
@@ -68,15 +69,17 @@
     
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:_session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [self.cameraView.layer setMasksToBounds:YES];
-    CGRect frame = self.cameraView.frame;
+    [self.view.layer setMasksToBounds:YES];
+    CGRect frame = self.view.frame;
     [previewLayer setFrame:frame];
-    [self.cameraView.layer insertSublayer:previewLayer atIndex:0];
+    [self.view.layer insertSublayer:previewLayer atIndex:0];
     
     //Initializing output and adding it to session
     _imageOutput = [[AVCapturePhotoOutput alloc]init];
     [_session addOutput:_imageOutput];
     [_session startRunning];
+    
+   
     
     
 }
@@ -138,6 +141,8 @@
 
 -(void)captureOutput:(AVCapturePhotoOutput *)captureOutput didFinishProcessingPhotoSampleBuffer:(CMSampleBufferRef)photoSampleBuffer previewPhotoSampleBuffer:(CMSampleBufferRef)previewPhotoSampleBuffer resolvedSettings:(AVCaptureResolvedPhotoSettings *)resolvedSettings bracketSettings:(AVCaptureBracketedStillImageSettings *)bracketSettings error:(NSError *)error
 {
+    NSLog(@"This is camera view frame %f",_cameraView.frame.size.height);
+    NSLog(@"This is camera view frame %f",_cameraView.frame.size.width);
     if (error) {
         NSLog(@"error : %@", error.localizedDescription);
     }
@@ -145,8 +150,19 @@
     if (photoSampleBuffer) {
         NSData *data = [AVCapturePhotoOutput JPEGPhotoDataRepresentationForJPEGSampleBuffer:photoSampleBuffer previewPhotoSampleBuffer:previewPhotoSampleBuffer];
         _imageCaptured = [UIImage imageWithData:data];
+        CGFloat xframe = _imageCaptured.size.height;
+        CGFloat yframe = _imageCaptured.size.width;
+        NSLog(@"This is image height %f",xframe);
+        NSLog(@"This is image height %f",yframe);
+        
        [self.captureImageView setImage:_imageCaptured];
+       // [self.captureImageView setContentMode:UIViewContentModeScaleAspectFit];
+    //[self.captureImageView setFrame:AVMakeRectWithAspectRatioInsideRect(_imageCaptured.size,_captureImageView.frame)];
+        NSLog(@"This is image view %f",_captureImageView.frame.size.height);
+        NSLog(@"This is image view %f",_captureImageView.frame.size.width);
        self.captureImageView.hidden = false;
+        self.flipCameraButton.hidden = true;
+        self.cancelButton.hidden =true;
         [self startImageView];
         _captureImageView.userInteractionEnabled= true;
 
@@ -156,11 +172,8 @@
 }
 
 
-
-
 -(void)startImageView{
     CGRect imageFrame = _captureImageView.frame;
-    
     UIButton *cancelImageButton = [self createButton:CGRectMake(8, 8, 50, 50) image: @"photo_close_icon" action:@selector(closeImageView:) parentView:_captureImageView];
     UIButton *saveImageButton = [self createButton:CGRectMake(8, imageFrame.size.height-58, 50, 30) image: @"" action:@selector(saveImageAction:) parentView:_captureImageView];
     [saveImageButton setTitle:@"Save" forState:UIControlStateNormal];
@@ -171,6 +184,8 @@
 -(void)closeImageView:(id)sender{
     
     _captureImageView.hidden = true;
+    self.flipCameraButton.hidden = false;
+    self.cancelButton.hidden =false;
 }
 
 -(void)saveImageAction:(id)sender{
@@ -181,6 +196,8 @@
         UIImageWriteToSavedPhotosAlbum(_imageCaptured, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hideAnimated:YES];
+                
+                //[self.view maketo]
             });
         });
     } else {
@@ -188,7 +205,6 @@
     }
     
 }
-
 
 
 - (IBAction)cancelAction:(id)sender {
@@ -217,6 +233,7 @@
         [alertDisplay addAction:okAction];
         [self presentViewController:alertDisplay animated:YES completion:Nil];
     }else{
+        [self toastViewWithMessage:@"Image saved" andDuration:2];
         NSLog(@"image saved");
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            [hud hideAnimated:YES];
@@ -242,11 +259,6 @@
             [hud hideAnimated:YES];
             
         });
-        
-        
-    
-       
-        
     }else{
         NSLog(@"Sorry, u dont have access to send message");
     }
@@ -260,6 +272,57 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+-(void)toastViewWithMessage:(NSString*)message andDuration:(NSTimeInterval )duration{
+    CGRect frame = self.captureImageView.frame;
+    toastView = [[UIView alloc]initWithFrame:frame];
+    toastView.backgroundColor = [UIColor clearColor];
+    CGRect labelFrame  = CGRectMake(frame.size.width/2, frame.size.height-50, 100, 30);
+    UILabel *label = [[UILabel alloc]initWithFrame:labelFrame];
+    label.text = [NSString stringWithFormat:@"%@", message];
+    label.textColor = [UIColor redColor];
+    label.backgroundColor = [UIColor blackColor];
+    //label.frame = CGRectMake(frame.size.width/2, frame.size.height-50, 50, 30);
+    [toastView addSubview:label];
+    
+
+        [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         //yourAnimation
+                         [self.captureImageView addSubview:toastView];
+                         //toastView.alpha = 1;
+                         
+                     } completion:^(BOOL finished){
+                         NSLog(@"Animation is finished");
+                     }];
+    
+    //NSTimer *time = duration;
+    [self performSelector:@selector(dimissToastView:) withObject:self afterDelay:duration];
+    
+}
+
+-(void)dimissToastView:(id)selector{
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         //yourAnimation
+                         toastView.alpha = 0;
+                         
+                     } completion:^(BOOL finished){
+                         
+                     }];
+    
+    
+    
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
 
 @end
 

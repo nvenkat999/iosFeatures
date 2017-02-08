@@ -7,9 +7,10 @@
 //
 
 #import "GetServiceResultViewController.h"
-
+#import "GetServiceDetailViewController.h"
 #import "GetServiceResultsObject.h"
 #import "GetServiceViewController.h"
+#import "GetServiceCell.h"
 
 @interface GetServiceResultViewController ()
 
@@ -73,11 +74,26 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    GetServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceResultsCell" forIndexPath:indexPath];
     GetServiceResultsObject *individaulObject = [_serviceResultsData objectAtIndex:indexPath.row];
-    cell.textLabel.text = individaulObject.Title;
+   // cell.textLabel.text = individaulObject.Title;
+    cell.cellTitle.text = individaulObject.Title;
+    NSString *strImageData= individaulObject.Image[0];
+   NSData * imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:strImageData]];
+    //NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:strImageData]];
+    //NSData * imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:individaulObject.Image[0]]];
+    cell.cellImage.image = [UIImage imageWithData:imageData];
     // Configure the cell...
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"showDetailSegue"]) {
+        GetServiceDetailViewController *detailView = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.atableView indexPathForSelectedRow];
+        NSInteger row = [indexPath row];
+        detailView.detailData = @[_serviceResultsData[row]];
+    }
 }
 
 
@@ -146,7 +162,7 @@
         [_serviceResultsData addObject:[[GetServiceResultsObject alloc]initWithTitle:objTitle andPrice:objPrice andCategory:objCategory andArtist:objArtist andImage: (NSMutableArray *)objArrayImages  andLink:objLink]];
         
     }
-    NSLog(@"This is service result %@",_serviceResultsData);
+    //NSLog(@"This is service result %@",_serviceResultsData);
     //[self.tableView reloadData];
     
     // });

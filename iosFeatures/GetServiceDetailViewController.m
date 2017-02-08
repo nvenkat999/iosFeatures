@@ -1,27 +1,28 @@
 //
 //  GetServiceDetailViewController.m
-//  iosLearningProject
+//  iosFeatures
 //
-//  Created by Venkata  naraharisetty on 12/28/16.
-//  Copyright © 2016 Venkata  naraharisetty. All rights reserved.
+//  Created by Venkata  naraharisetty on 2/3/17.
+//  Copyright © 2017 Venkata  naraharisetty. All rights reserved.
 //
 
 #import "GetServiceDetailViewController.h"
+#import "GetServiceResultsObject.h"
+#import "GetServiceImageView.h"
 
 @interface GetServiceDetailViewController ()
 
 @end
 
+int imageIndex = 2;
 @implementation GetServiceDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self displayData];
+    [self addGestureRecognizers];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,59 +30,65 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+-(void)viewDidLayoutSubviews{
+    [_scrollView addSubview:_contentView];
+    _scrollView.contentSize = _contentView.frame.size;
+    //_scrollView.delegate =self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+-(void)displayData{
+    GetServiceResultsObject *dataObject = [_detailData objectAtIndex:0];
+    self.objectTitle.text = dataObject.Title;
+    self.objectArtist.text = dataObject.Artist;
+    self.objectCategory.text = dataObject.Category;
+    self.objectPrice.text = dataObject.Price;
+    _detailImageArray = dataObject.Image;
+    _detailImageData = _detailImageArray[imageIndex];
+    NSData *Imagedata = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:_detailImageData]];
+    _objectImage.image = [UIImage imageWithData:Imagedata];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+-(void) addGestureRecognizers {
+    UITapGestureRecognizer *tapImageRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImageRecognized:)];
+    [self.objectImage addGestureRecognizer:tapImageRecognizer];
     
-    // Configure the cell...
+//    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeRecognized:)];
+//    [self.objectImage addGestureRecognizer: swipeRecognizer];
+}
+
+
+-(void)tapImageRecognized:(UITapGestureRecognizer *)taprecongizer{
     
-    return cell;
+    //UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main.storyboard" bundle:nil];
+    GetServiceImageView *imageView = [self.storyboard instantiateViewControllerWithIdentifier:@"GetServiceImageScreen"];
+    [self.navigationController pushViewController:imageView animated:YES];
+    imageView.fullImageArray = _detailImageArray;
+    imageView.fullImageIndex = imageIndex;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (IBAction)swipeRecognized:(UIGestureRecognizer *)sender;{
+    
+    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *)sender direction];
+    switch (direction) {
+        case UISwipeGestureRecognizerDirectionRight:
+            NSLog(@"Right swipe");
+            imageIndex++;
+            break;
+        case UISwipeGestureRecognizerDirectionLeft:
+            NSLog(@"Left swipe");
+            imageIndex--;
+        default:
+            break;
+    }
+    imageIndex = (imageIndex < 0) ? ([_detailImageArray count] -1):
+    imageIndex % [_detailImageArray count];
+    _detailImageData = _detailImageArray[imageIndex];
+    NSData *Imagedata = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:_detailImageData]];
+    _objectImage.image = [UIImage imageWithData:Imagedata];
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
