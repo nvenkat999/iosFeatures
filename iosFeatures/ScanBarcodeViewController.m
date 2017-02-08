@@ -59,10 +59,10 @@
 
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:_session];
     [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [self.cameraView.layer setMasksToBounds:YES];
-    CGRect frame= self.cameraView.frame;
+    [self.view.layer setMasksToBounds:YES];
+    CGRect frame= self.view.frame;
     [previewLayer setFrame:frame];
-    [self.cameraView.layer addSublayer:previewLayer];
+    [self.view.layer addSublayer:previewLayer];
 
     _deviceOutput = [[AVCaptureMetadataOutput alloc]init];
     [_session addOutput:_deviceOutput];
