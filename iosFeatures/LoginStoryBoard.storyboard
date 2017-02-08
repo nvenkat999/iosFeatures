@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cAf-Fh-7Gw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82578125000000002" green="0.82578125000000002" blue="0.82578125000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="6fQ-Mu-c1y">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -32,7 +32,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cx-sc-bF1">
-                                    <rect key="frame" x="8" y="221.5" width="124" height="36"/>
+                                    <rect key="frame" x="8" y="221.5" width="125" height="36"/>
                                     <color key="backgroundColor" red="0.76286057689999998" green="0.0" blue="0.0071417142340000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="8cx-sc-bF1" secondAttribute="height" multiplier="69:20" id="wMn-VJ-Xje"/>
@@ -68,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-kA-kf7">
-                                    <rect key="frame" x="188" y="221.5" width="124" height="36"/>
+                                    <rect key="frame" x="187" y="221.5" width="125" height="36"/>
                                     <color key="backgroundColor" red="0.76286057689999998" green="0.0" blue="0.0071417142340000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Xcq-kA-kf7" secondAttribute="height" multiplier="69:20" id="sxG-kG-r5v"/>
@@ -438,7 +438,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0q-mQ-syS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="13.943028485757123"/>
+            <point key="canvasLocation" x="1103" y="7"/>
         </scene>
     </scenes>
 </document>
