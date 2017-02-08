@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		82044B181E1BD7A800FB15F8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82044B171E1BD7A800FB15F8 /* LocalAuthentication.framework */; };
 		82044B1E1E21814500FB15F8 /* KeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 82044B1D1E21814500FB15F8 /* KeyboardToolBar.m */; };
+		8228205F1E36A2E500E608C1 /* AlertControllerMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8228205E1E36A2E500E608C1 /* AlertControllerMethods.m */; };
+		822820611E37B5BA00E608C1 /* MapsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */; };
+		822820641E37C0BD00E608C1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822820631E37C0BD00E608C1 /* MapViewController.m */; };
+		822820671E37C15000E608C1 /* SearchLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822820661E37C15000E608C1 /* SearchLocationViewController.m */; };
+		822820691E37C5C300E608C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822820681E37C5C300E608C1 /* MapKit.framework */; };
+		8228206B1E37C80C00E608C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8228206A1E37C80C00E608C1 /* CoreLocation.framework */; };
+		8228206E1E383FFD00E608C1 /* MapAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8228206D1E383FFD00E608C1 /* MapAnnotationView.m */; };
+		825155061E3BEE8A00ECFB51 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825155051E3BEE8A00ECFB51 /* StoreKit.framework */; };
+		825155081E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825155071E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard */; };
+		8251550B1E3D1D1F00ECFB51 /* AppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8251550A1E3D1D1F00ECFB51 /* AppPurchaseViewController.m */; };
+		8251550D1E3DA65800ECFB51 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8251550C1E3DA65800ECFB51 /* iAd.framework */; };
+		8251550F1E40BF6800ECFB51 /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8251550E1E40BF6800ECFB51 /* camera-icon.png */; };
+		825155111E40C60400ECFB51 /* camera_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155101E40C60400ECFB51 /* camera_icon3.png */; };
+		825155131E40C66300ECFB51 /* camera-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155121E40C66300ECFB51 /* camera-icon2.png */; };
 		8289A8D81E16F81300077EAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8D71E16F81300077EAE /* main.m */; };
 		8289A8DB1E16F81300077EAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DA1E16F81300077EAE /* AppDelegate.m */; };
 		8289A8DE1E16F81300077EAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DD1E16F81300077EAE /* ViewController.m */; };
@@ -19,7 +33,6 @@
 		8289A9A71E16FC4100077EAE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A98E1E16FC4100077EAE /* LoginViewController.m */; };
 		8289A9A81E16FC4100077EAE /* SlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A98F1E16FC4100077EAE /* SlideMenuViewController.m */; };
 		8289A9A91E16FC4100077EAE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A9901E16FC4100077EAE /* SWRevealViewController.m */; };
-		8289A9AA1E16FC4100077EAE /* GetServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A9921E16FC4100077EAE /* GetServiceDetailViewController.m */; };
 		8289A9AB1E16FC4100077EAE /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A9951E16FC4100077EAE /* HelpViewController.m */; };
 		8289A9AC1E16FC4100077EAE /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A9961E16FC4100077EAE /* LaunchScreenViewController.m */; };
 		8289A9AD1E16FC4100077EAE /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A9991E16FC4100077EAE /* UserProfileViewController.m */; };
@@ -50,7 +63,13 @@
 		82BA40601E327A1D000BDD7F /* flashing_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA405D1E327A1D000BDD7F /* flashing_on@2x.png */; };
 		82BA40611E327A1D000BDD7F /* switch_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */; };
 		82BA40671E32AD99000BDD7F /* ScanBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */; };
+		82F11F011E44339C00E36966 /* GetServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F11F001E44339C00E36966 /* GetServiceCell.m */; };
+		82F11F041E44B53A00E36966 /* GetServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F11F031E44B53A00E36966 /* GetServiceDetailViewController.m */; };
+		82F11F071E48DF9A00E36966 /* GetServiceImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F11F061E48DF9A00E36966 /* GetServiceImageView.m */; };
+		82F1A1BB1E3A50F0000EFFE9 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1A1BA1E3A50F0000EFFE9 /* Contacts.framework */; };
 		82F839F21E2D8BF600575DCF /* CustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F839F11E2D8BF600575DCF /* CustomCameraViewController.m */; };
+		82FEEA5B1E34650B00E23137 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEEA5A1E34650B00E23137 /* CoreGraphics.framework */; };
+		82FEEA641E3675AD00E23137 /* AlertViewMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FEEA631E3675AD00E23137 /* AlertViewMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +93,25 @@
 		82044B171E1BD7A800FB15F8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		82044B1C1E21814500FB15F8 /* KeyboardToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardToolBar.h; sourceTree = "<group>"; };
 		82044B1D1E21814500FB15F8 /* KeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardToolBar.m; sourceTree = "<group>"; };
+		8228205D1E36A2E500E608C1 /* AlertControllerMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerMethods.h; sourceTree = "<group>"; };
+		8228205E1E36A2E500E608C1 /* AlertControllerMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerMethods.m; sourceTree = "<group>"; };
+		822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapsStoryBoard.storyboard; sourceTree = "<group>"; };
+		822820621E37C0BD00E608C1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		822820631E37C0BD00E608C1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		822820651E37C15000E608C1 /* SearchLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLocationViewController.h; sourceTree = "<group>"; };
+		822820661E37C15000E608C1 /* SearchLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLocationViewController.m; sourceTree = "<group>"; };
+		822820681E37C5C300E608C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8228206A1E37C80C00E608C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8228206C1E383FFD00E608C1 /* MapAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotationView.h; sourceTree = "<group>"; };
+		8228206D1E383FFD00E608C1 /* MapAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotationView.m; sourceTree = "<group>"; };
+		825155051E3BEE8A00ECFB51 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		825155071E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppPurchasesStoryBoard.storyboard; sourceTree = "<group>"; };
+		825155091E3D1D1F00ECFB51 /* AppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPurchaseViewController.h; sourceTree = "<group>"; };
+		8251550A1E3D1D1F00ECFB51 /* AppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPurchaseViewController.m; sourceTree = "<group>"; };
+		8251550C1E3DA65800ECFB51 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8251550E1E40BF6800ECFB51 /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon.png"; path = "../../../Downloads/camera-icon.png"; sourceTree = "<group>"; };
+		825155101E40C60400ECFB51 /* camera_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_icon3.png; path = ../../../Downloads/camera_icon3.png; sourceTree = "<group>"; };
+		825155121E40C66300ECFB51 /* camera-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon2.png"; path = "../../../Downloads/camera-icon2.png"; sourceTree = "<group>"; };
 		8289A8D31E16F81300077EAE /* iosFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8289A8D71E16F81300077EAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8289A8D91E16F81300077EAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,8 +131,6 @@
 		8289A98E1E16FC4100077EAE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8289A98F1E16FC4100077EAE /* SlideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuViewController.m; sourceTree = "<group>"; };
 		8289A9901E16FC4100077EAE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		8289A9911E16FC4100077EAE /* GetServiceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetServiceDetailViewController.h; sourceTree = "<group>"; };
-		8289A9921E16FC4100077EAE /* GetServiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetServiceDetailViewController.m; sourceTree = "<group>"; };
 		8289A9931E16FC4100077EAE /* GetServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetServiceViewController.h; sourceTree = "<group>"; };
 		8289A9941E16FC4100077EAE /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		8289A9951E16FC4100077EAE /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
@@ -143,8 +179,18 @@
 		82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_camera@2x.png"; sourceTree = "<group>"; };
 		82BA40651E32AD99000BDD7F /* ScanBarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBarcodeViewController.h; sourceTree = "<group>"; };
 		82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBarcodeViewController.m; sourceTree = "<group>"; };
+		82F11EFF1E44339C00E36966 /* GetServiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetServiceCell.h; sourceTree = "<group>"; };
+		82F11F001E44339C00E36966 /* GetServiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetServiceCell.m; sourceTree = "<group>"; };
+		82F11F021E44B53A00E36966 /* GetServiceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetServiceDetailViewController.h; sourceTree = "<group>"; };
+		82F11F031E44B53A00E36966 /* GetServiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetServiceDetailViewController.m; sourceTree = "<group>"; };
+		82F11F051E48DF9A00E36966 /* GetServiceImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetServiceImageView.h; sourceTree = "<group>"; };
+		82F11F061E48DF9A00E36966 /* GetServiceImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetServiceImageView.m; sourceTree = "<group>"; };
+		82F1A1BA1E3A50F0000EFFE9 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		82F839F01E2D8BF600575DCF /* CustomCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCameraViewController.h; sourceTree = "<group>"; };
 		82F839F11E2D8BF600575DCF /* CustomCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCameraViewController.m; sourceTree = "<group>"; };
+		82FEEA5A1E34650B00E23137 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		82FEEA621E3675AD00E23137 /* AlertViewMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewMethods.h; sourceTree = "<group>"; };
+		82FEEA631E3675AD00E23137 /* AlertViewMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewMethods.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +198,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8251550D1E3DA65800ECFB51 /* iAd.framework in Frameworks */,
+				825155061E3BEE8A00ECFB51 /* StoreKit.framework in Frameworks */,
+				82F1A1BB1E3A50F0000EFFE9 /* Contacts.framework in Frameworks */,
+				8228206B1E37C80C00E608C1 /* CoreLocation.framework in Frameworks */,
+				822820691E37C5C300E608C1 /* MapKit.framework in Frameworks */,
+				82FEEA5B1E34650B00E23137 /* CoreGraphics.framework in Frameworks */,
 				82BA405B1E323F67000BDD7F /* MessageUI.framework in Frameworks */,
 				82B5165A1E2D0A49000E3D6C /* Photos.framework in Frameworks */,
 				82B516521E2C0DE6000E3D6C /* AVFoundation.framework in Frameworks */,
@@ -252,18 +304,32 @@
 		8289A93C1E16F8CE00077EAE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8289A9911E16FC4100077EAE /* GetServiceDetailViewController.h */,
-				8289A9921E16FC4100077EAE /* GetServiceDetailViewController.m */,
+				825155091E3D1D1F00ECFB51 /* AppPurchaseViewController.h */,
+				8251550A1E3D1D1F00ECFB51 /* AppPurchaseViewController.m */,
+				82F839F01E2D8BF600575DCF /* CustomCameraViewController.h */,
+				82F839F11E2D8BF600575DCF /* CustomCameraViewController.m */,
+				82F11F021E44B53A00E36966 /* GetServiceDetailViewController.h */,
+				82F11F031E44B53A00E36966 /* GetServiceDetailViewController.m */,
+				828E1E061E32B2D80097E934 /* GetServiceResultViewController.h */,
+				828E1E071E32B2D80097E934 /* GetServiceResultViewController.m */,
 				8289A9931E16FC4100077EAE /* GetServiceViewController.h */,
 				8289A9B41E16FCB400077EAE /* GetServiceViewController.m */,
 				8289A9941E16FC4100077EAE /* HelpViewController.h */,
 				8289A9951E16FC4100077EAE /* HelpViewController.m */,
 				8289A99C1E16FC4100077EAE /* HomeViewController.h */,
 				8289A9B51E16FCB400077EAE /* HomeViewController.m */,
+				82B516561E2C0E9D000E3D6C /* ImageViewController.h */,
+				82B516571E2C0E9D000E3D6C /* ImageViewController.m */,
 				8289A99D1E16FC4100077EAE /* LaunchScreenViewController.h */,
 				8289A9961E16FC4100077EAE /* LaunchScreenViewController.m */,
 				8289A98D1E16FC4100077EAE /* LoginViewController.h */,
 				8289A98E1E16FC4100077EAE /* LoginViewController.m */,
+				822820621E37C0BD00E608C1 /* MapViewController.h */,
+				822820631E37C0BD00E608C1 /* MapViewController.m */,
+				82BA40651E32AD99000BDD7F /* ScanBarcodeViewController.h */,
+				82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */,
+				822820651E37C15000E608C1 /* SearchLocationViewController.h */,
+				822820661E37C15000E608C1 /* SearchLocationViewController.m */,
 				8289A99F1E16FC4100077EAE /* SignUpViewController.h */,
 				8289A9A01E16FC4100077EAE /* SignUpViewController.m */,
 				8289A9971E16FC4100077EAE /* SlideMenuViewController.h */,
@@ -274,14 +340,8 @@
 				8289A9991E16FC4100077EAE /* UserProfileViewController.m */,
 				8289A99A1E16FC4100077EAE /* VersionViewController.h */,
 				8289A99B1E16FC4100077EAE /* VersionViewController.m */,
-				82B516561E2C0E9D000E3D6C /* ImageViewController.h */,
-				82B516571E2C0E9D000E3D6C /* ImageViewController.m */,
-				82F839F01E2D8BF600575DCF /* CustomCameraViewController.h */,
-				82F839F11E2D8BF600575DCF /* CustomCameraViewController.m */,
-				82BA40651E32AD99000BDD7F /* ScanBarcodeViewController.h */,
-				82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */,
-				828E1E061E32B2D80097E934 /* GetServiceResultViewController.h */,
-				828E1E071E32B2D80097E934 /* GetServiceResultViewController.m */,
+				82F11F051E48DF9A00E36966 /* GetServiceImageView.h */,
+				82F11F061E48DF9A00E36966 /* GetServiceImageView.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +353,8 @@
 				8289A9C11E16FD8300077EAE /* LaunchScreenStoryBoard.storyboard */,
 				8289A9C21E16FD8300077EAE /* LoginStoryBoard.storyboard */,
 				8289A9C31E16FD8300077EAE /* SlideMenuStoryBoard.storyboard */,
+				822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */,
+				825155071E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -300,6 +362,12 @@
 		8289A9C81E16FDC700077EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8251550C1E3DA65800ECFB51 /* iAd.framework */,
+				825155051E3BEE8A00ECFB51 /* StoreKit.framework */,
+				82F1A1BA1E3A50F0000EFFE9 /* Contacts.framework */,
+				8228206A1E37C80C00E608C1 /* CoreLocation.framework */,
+				822820681E37C5C300E608C1 /* MapKit.framework */,
+				82FEEA5A1E34650B00E23137 /* CoreGraphics.framework */,
 				82BA405A1E323F67000BDD7F /* MessageUI.framework */,
 				82B516591E2D0A49000E3D6C /* Photos.framework */,
 				82B516511E2C0DE6000E3D6C /* AVFoundation.framework */,
@@ -315,6 +383,9 @@
 		82BA40571E31137F000BDD7F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				825155121E40C66300ECFB51 /* camera-icon2.png */,
+				825155101E40C60400ECFB51 /* camera_icon3.png */,
+				8251550E1E40BF6800ECFB51 /* camera-icon.png */,
 				82BA405C1E327A1D000BDD7F /* flashing_off@2x.png */,
 				82BA405D1E327A1D000BDD7F /* flashing_on@2x.png */,
 				82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */,
@@ -341,6 +412,10 @@
 				8289A9A41E16FC4100077EAE /* UserProfile.m */,
 				82044B1C1E21814500FB15F8 /* KeyboardToolBar.h */,
 				82044B1D1E21814500FB15F8 /* KeyboardToolBar.m */,
+				8228206C1E383FFD00E608C1 /* MapAnnotationView.h */,
+				8228206D1E383FFD00E608C1 /* MapAnnotationView.m */,
+				82F11EFF1E44339C00E36966 /* GetServiceCell.h */,
+				82F11F001E44339C00E36966 /* GetServiceCell.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -352,6 +427,10 @@
 				8289A99E1E16FC4100077EAE /* LearningMethods.m */,
 				8289A9A11E16FC4100077EAE /* SqlLiteDatabaseMethods.h */,
 				8289A9A21E16FC4100077EAE /* SqlLiteDatabaseMethods.m */,
+				82FEEA621E3675AD00E23137 /* AlertViewMethods.h */,
+				82FEEA631E3675AD00E23137 /* AlertViewMethods.m */,
+				8228205D1E36A2E500E608C1 /* AlertControllerMethods.h */,
+				8228205E1E36A2E500E608C1 /* AlertControllerMethods.m */,
 			);
 			name = Methods;
 			sourceTree = "<group>";
@@ -424,8 +503,11 @@
 					8289A8D21E16F81300077EAE = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 4H27889NRC;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -470,11 +552,16 @@
 			files = (
 				8289A9C41E16FD8300077EAE /* HomeScreenStoryBoard.storyboard in Resources */,
 				82BA40611E327A1D000BDD7F /* switch_camera@2x.png in Resources */,
+				825155131E40C66300ECFB51 /* camera-icon2.png in Resources */,
 				8289A8E61E16F81300077EAE /* Assets.xcassets in Resources */,
+				825155111E40C60400ECFB51 /* camera_icon3.png in Resources */,
 				8289A9C61E16FD8300077EAE /* LoginStoryBoard.storyboard in Resources */,
+				822820611E37B5BA00E608C1 /* MapsStoryBoard.storyboard in Resources */,
 				82BA40591E31141A000BDD7F /* photo_close_icon@2x.png in Resources */,
 				82BA405F1E327A1D000BDD7F /* flashing_off@2x.png in Resources */,
 				8289A9C71E16FD8300077EAE /* SlideMenuStoryBoard.storyboard in Resources */,
+				825155081E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard in Resources */,
+				8251550F1E40BF6800ECFB51 /* camera-icon.png in Resources */,
 				8289A9C51E16FD8300077EAE /* LaunchScreenStoryBoard.storyboard in Resources */,
 				82BA40601E327A1D000BDD7F /* flashing_on@2x.png in Resources */,
 			);
@@ -503,29 +590,37 @@
 			files = (
 				82044B1E1E21814500FB15F8 /* KeyboardToolBar.m in Sources */,
 				8289A9A91E16FC4100077EAE /* SWRevealViewController.m in Sources */,
+				822820671E37C15000E608C1 /* SearchLocationViewController.m in Sources */,
 				82F839F21E2D8BF600575DCF /* CustomCameraViewController.m in Sources */,
 				8289A8DE1E16F81300077EAE /* ViewController.m in Sources */,
 				828E1E081E32B2D80097E934 /* GetServiceResultViewController.m in Sources */,
 				8289A9B81E16FCB400077EAE /* GetServiceViewController.m in Sources */,
 				82B516581E2C0E9D000E3D6C /* ImageViewController.m in Sources */,
+				82FEEA641E3675AD00E23137 /* AlertViewMethods.m in Sources */,
 				8289A8DB1E16F81300077EAE /* AppDelegate.m in Sources */,
+				8228205F1E36A2E500E608C1 /* AlertControllerMethods.m in Sources */,
 				8289A8E41E16F81300077EAE /* iosFeatures.xcdatamodeld in Sources */,
-				8289A9AA1E16FC4100077EAE /* GetServiceDetailViewController.m in Sources */,
 				8289A9AC1E16FC4100077EAE /* LaunchScreenViewController.m in Sources */,
 				8289A9A81E16FC4100077EAE /* SlideMenuViewController.m in Sources */,
+				82F11F071E48DF9A00E36966 /* GetServiceImageView.m in Sources */,
 				8289A9B11E16FC4100077EAE /* SqlLiteDatabaseMethods.m in Sources */,
 				8289A9B21E16FC4100077EAE /* UserProfile.m in Sources */,
 				8289A9BC1E16FD0E00077EAE /* GetServiceResultsObject.m in Sources */,
 				8289A9AE1E16FC4100077EAE /* VersionViewController.m in Sources */,
 				8289A9AD1E16FC4100077EAE /* UserProfileViewController.m in Sources */,
 				82B5164E1E290E48000E3D6C /* MBProgressHUD.m in Sources */,
+				8251550B1E3D1D1F00ECFB51 /* AppPurchaseViewController.m in Sources */,
 				8289A9AF1E16FC4100077EAE /* LearningMethods.m in Sources */,
+				8228206E1E383FFD00E608C1 /* MapAnnotationView.m in Sources */,
 				82BA40671E32AD99000BDD7F /* ScanBarcodeViewController.m in Sources */,
 				8289A8D81E16F81300077EAE /* main.m in Sources */,
 				8289A9AB1E16FC4100077EAE /* HelpViewController.m in Sources */,
 				8289A9B01E16FC4100077EAE /* SignUpViewController.m in Sources */,
+				82F11F011E44339C00E36966 /* GetServiceCell.m in Sources */,
+				82F11F041E44B53A00E36966 /* GetServiceDetailViewController.m in Sources */,
 				8289A9B91E16FCB400077EAE /* HomeViewController.m in Sources */,
 				8289A9A71E16FC4100077EAE /* LoginViewController.m in Sources */,
+				822820641E37C0BD00E608C1 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,13 +754,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iosFeatures/iosFeatures.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4H27889NRC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iosFeatures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venkats.iosFeatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "735ed644-a154-4964-aadb-630aab911e60";
-				PROVISIONING_PROFILE_SPECIFIER = iosFeaturesDevProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -675,13 +770,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iosFeatures/iosFeatures.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4H27889NRC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iosFeatures/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = venkats.iosFeatures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "735ed644-a154-4964-aadb-630aab911e60";
-				PROVISIONING_PROFILE_SPECIFIER = iosFeaturesDevProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
