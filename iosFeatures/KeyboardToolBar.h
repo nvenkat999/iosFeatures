@@ -14,10 +14,10 @@
 @property (strong, nonatomic) NSArray *inputFieldsDelegates;
 @property (weak,nonatomic) UITextField *activeTextField;
 + (void)setInputAccessoryViewForTextField:(UITextField *)activeTextField;
-- (void)setInputFields:(NSArray *)inputFields;
+//- (void)setInputFields:(NSArray *)inputFields;
+- (void)setInputFields:(NSMutableArray *)inputFields;
 @property (assign, nonatomic) CGRect keyboardFrame;
 @property (strong, nonatomic) UIScrollView *mainScrollView;
-
 
 +(KeyboardToolBar *)keyBoardToolBar;
 @end

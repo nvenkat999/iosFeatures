@@ -52,7 +52,7 @@
     [_autoLoginSwitch addTarget:self action:@selector(autoLoginEnabled) forControlEvents:UIControlEventValueChanged];
     [_enableTouchIDSwitch addTarget:self action:@selector(touchIDEnabled) forControlEvents:UIControlEventValueChanged];
     if ([_useTouchID  isEqual:@"YES"]) {
-        [self useTouchID];
+        [self validateTouchID];
         [_useTouchID isEqual:@"NO"];
     }
     //KeyboardToolBar *toolbar = [KeyboardToolBar keyBoardToolBar];
@@ -366,7 +366,7 @@
     
 #pragma mark TouchID Functionality
 
--(void)useTouchID{
+-(void)validateTouchID{
     
     LAContext *authContext = [[LAContext alloc]init];
     NSError *authError= nil;

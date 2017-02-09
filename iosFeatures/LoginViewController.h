@@ -15,5 +15,4 @@
 @property(strong,nonatomic) NSManagedObjectContext *managedObjectContext;
 @property(strong,nonatomic) NSString *useTouchID;
 @property  UIActivityIndicatorView *activityIndicator;
-
 @end

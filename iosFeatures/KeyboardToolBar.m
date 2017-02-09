@@ -36,6 +36,7 @@
 
 
 -(id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
     UIToolbar *myToolBar = [[UIToolbar alloc]init];
     [myToolBar setBarStyle:UIBarStyleDefault];
     [myToolBar setTintColor:[UIColor blueColor]];
@@ -58,7 +59,7 @@
     return  self;
 }
 
-- (void)setInputFields:(NSArray *)inputFields {
+- (void)setInputFields:(NSMutableArray *)inputFields {
     _inputFields = inputFields;
     NSMutableArray *delegates = [NSMutableArray array];
     for (UITextField *textField in inputFields) {
