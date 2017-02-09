@@ -59,8 +59,6 @@
 		82B5165A1E2D0A49000E3D6C /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B516591E2D0A49000E3D6C /* Photos.framework */; };
 		82BA40591E31141A000BDD7F /* photo_close_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA40581E31141A000BDD7F /* photo_close_icon@2x.png */; };
 		82BA405B1E323F67000BDD7F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BA405A1E323F67000BDD7F /* MessageUI.framework */; };
-		82BA405F1E327A1D000BDD7F /* flashing_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA405C1E327A1D000BDD7F /* flashing_off@2x.png */; };
-		82BA40601E327A1D000BDD7F /* flashing_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA405D1E327A1D000BDD7F /* flashing_on@2x.png */; };
 		82BA40611E327A1D000BDD7F /* switch_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */; };
 		82BA40671E32AD99000BDD7F /* ScanBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */; };
 		82F11F011E44339C00E36966 /* GetServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F11F001E44339C00E36966 /* GetServiceCell.m */; };
@@ -174,8 +172,6 @@
 		82B516591E2D0A49000E3D6C /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		82BA40581E31141A000BDD7F /* photo_close_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_close_icon@2x.png"; sourceTree = "<group>"; };
 		82BA405A1E323F67000BDD7F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		82BA405C1E327A1D000BDD7F /* flashing_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashing_off@2x.png"; sourceTree = "<group>"; };
-		82BA405D1E327A1D000BDD7F /* flashing_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashing_on@2x.png"; sourceTree = "<group>"; };
 		82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_camera@2x.png"; sourceTree = "<group>"; };
 		82BA40651E32AD99000BDD7F /* ScanBarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBarcodeViewController.h; sourceTree = "<group>"; };
 		82BA40661E32AD99000BDD7F /* ScanBarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBarcodeViewController.m; sourceTree = "<group>"; };
@@ -386,8 +382,6 @@
 				825155121E40C66300ECFB51 /* camera-icon2.png */,
 				825155101E40C60400ECFB51 /* camera_icon3.png */,
 				8251550E1E40BF6800ECFB51 /* camera-icon.png */,
-				82BA405C1E327A1D000BDD7F /* flashing_off@2x.png */,
-				82BA405D1E327A1D000BDD7F /* flashing_on@2x.png */,
 				82BA405E1E327A1D000BDD7F /* switch_camera@2x.png */,
 				82BA40581E31141A000BDD7F /* photo_close_icon@2x.png */,
 			);
@@ -558,12 +552,10 @@
 				8289A9C61E16FD8300077EAE /* LoginStoryBoard.storyboard in Resources */,
 				822820611E37B5BA00E608C1 /* MapStoryBoard.storyboard in Resources */,
 				82BA40591E31141A000BDD7F /* photo_close_icon@2x.png in Resources */,
-				82BA405F1E327A1D000BDD7F /* flashing_off@2x.png in Resources */,
 				8289A9C71E16FD8300077EAE /* SlideMenuStoryBoard.storyboard in Resources */,
 				825155081E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard in Resources */,
 				8251550F1E40BF6800ECFB51 /* camera-icon.png in Resources */,
 				8289A9C51E16FD8300077EAE /* LaunchScreenStoryBoard.storyboard in Resources */,
-				82BA40601E327A1D000BDD7F /* flashing_on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
