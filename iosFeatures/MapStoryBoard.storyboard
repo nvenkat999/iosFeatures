@@ -111,26 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1072.5" y="145.77464788732394"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ftZ-Jz-Z6U">
-            <objects>
-                <navigationController id="T8W-Jf-mAa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LSB-7g-9jq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="a9b-dT-BZX" kind="relationship" relationship="rootViewController" id="ObM-XN-gEe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQ1-h9-78C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-804" y="146"/>
-        </scene>
         <!--Map View Controller-->
         <scene sceneID="jhs-sU-77o">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a9b-dT-BZX" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="a9b-dT-BZX" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2rb-Wq-F1i"/>
                         <viewControllerLayoutGuide type="bottom" id="jdO-Dr-GoJ"/>
@@ -139,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-Xe-p4y">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-Xe-p4y">
                                 <rect key="frame" x="0.0" y="45" width="320" height="435"/>
                             </mapView>
                         </subviews>
@@ -165,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yg2-h3-H2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110.625" y="145.77464788732394"/>
+            <point key="canvasLocation" x="229" y="145"/>
         </scene>
     </scenes>
 </document>

@@ -374,7 +374,10 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     UIViewController *_fromVC;
     void (^_completion)(void);
 }
-
+//This is changed by me because it is giving a warning that this method is amndatory
+-(void)pauseInteractiveTransition{
+    
+}
 
 - (id)initWithRevealController:(SWRevealViewController*)revealVC containerView:(UIView*)view fromVC:(UIViewController*)fromVC
     toVC:(UIViewController*)toVC completion:(void (^)(void))completion
@@ -764,13 +767,16 @@ const int FrontViewPositionNone = 0xff;
 }
 
 
+
+//I commented this as it is giving a warning
+/*
 - (NSUInteger)supportedInterfaceOrientations
 {
     // we could have simply not implemented this, but we choose to call super to make explicit that we
     // want the default behavior.
     return [super supportedInterfaceOrientations];
 }
-
+*/
 
 #pragma mark - Public methods and property accessors
 
