@@ -77,8 +77,8 @@
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     
-    CGRect highlightBarcodeView = CGRectZero;
-    AVMetadataMachineReadableCodeObject *barcodeObject;
+    //CGRect highlightBarcodeView = CGRectZero;
+    //AVMetadataMachineReadableCodeObject *barcodeObject;
     NSString *barcodeString =nil;
     NSArray *barcodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code,AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
     

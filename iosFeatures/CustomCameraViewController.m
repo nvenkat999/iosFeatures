@@ -175,6 +175,7 @@
 -(void)startImageView{
     CGRect imageFrame = _captureImageView.frame;
     UIButton *cancelImageButton = [self createButton:CGRectMake(8, 8, 50, 50) image: @"photo_close_icon" action:@selector(closeImageView:) parentView:_captureImageView];
+    [cancelImageButton setUserInteractionEnabled:true];
     UIButton *saveImageButton = [self createButton:CGRectMake(8, imageFrame.size.height-58, 50, 30) image: @"" action:@selector(saveImageAction:) parentView:_captureImageView];
     [saveImageButton setTitle:@"Save" forState:UIControlStateNormal];
     UIButton *sendImageButton = [self createButton:CGRectMake(imageFrame.size.width-48, imageFrame.size.height-58, 50, 30) image: @"" action:@selector(sendImageAction:) parentView:_captureImageView];

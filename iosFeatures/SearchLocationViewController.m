@@ -43,6 +43,8 @@
     [self.coder geocodeAddressString:self.searchTextField.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if(!error){
             for (CLPlacemark *placemark in placemarks) {
+                NSLog(@"this is placemark %@",placemark);
+            //for (CLPlacemark *placemark = 0,placemark++, placemark <placemarks.count) {
                 if ([placemarks count] >0) {
                     CLPlacemark *firstPlacemark = [placemarks objectAtIndex:0];
                     destinationLocation = [[CLLocation alloc]initWithLatitude:firstPlacemark.location.coordinate.latitude longitude:firstPlacemark.location.coordinate.longitude];

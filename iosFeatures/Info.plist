@@ -46,8 +46,19 @@
 		<string>MKDirectionsModeTaxi</string>
 		<string>MKDirectionsModeTrain</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Used to take Photos</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow app to use location services even when you are not using app</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow app to use location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow app to use location services when app is running</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Used to use Photos</string>
 	<key>UILaunchStoryboardName</key>
@@ -58,22 +69,13 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow app to use location services when app is running</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow app to use location services even when you are not using app</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Allow app to use location</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 </dict>
 </plist>

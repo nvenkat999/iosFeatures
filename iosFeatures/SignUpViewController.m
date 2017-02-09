@@ -111,7 +111,7 @@
             [delegates addObject:[NSNull null]];
         }
         textField.delegate = self;
-        textField.inputAccessoryView = self;
+        textField.inputAccessoryView = self.view;
     }
     self.inputFieldsDelegates = delegates;
 }
@@ -343,7 +343,7 @@
     [myToolBar setTranslucent:YES];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard:)];
     UISegmentedControl *previousNextControl =[[UISegmentedControl alloc]initWithItems:@[@"previos",@"next"]];
-    [previousNextControl addTarget:self action:@selector(previosuNextButtons:) forControlEvents:UIControlEventValueChanged];
+    [previousNextControl addTarget:self action:@selector(previousNextButtons:) forControlEvents:UIControlEventValueChanged];
     UIBarButtonItem *space = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     UIBarButtonItem *controlButton = [[UIBarButtonItem alloc]initWithCustomView:previousNextControl];
     [myToolBar setItems:@[controlButton,space,doneButton]];

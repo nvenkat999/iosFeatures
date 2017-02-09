@@ -11,7 +11,7 @@
 
 @interface GetServiceImageView : UIViewController
 @property(strong,nonatomic) NSArray *fullImageArray;
-@property int fullImageIndex;
+@property NSInteger fullImageIndex;
 @property (strong,nonatomic) NSString *fullImageData;
 @property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
 @property (strong, nonatomic) UIImageView *subImageView;

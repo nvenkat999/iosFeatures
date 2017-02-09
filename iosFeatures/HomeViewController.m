@@ -37,7 +37,7 @@
     if (indexPath.row==0) {
         if (indexPath.section == 2)
          {
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MapsStoryBoard" bundle:nil];
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MapStoryBoard" bundle:nil];
         UIViewController *mapViewController = [storyBoard instantiateViewControllerWithIdentifier:@"MapViewController"];
         [self.navigationController pushViewController:mapViewController animated:YES];
         

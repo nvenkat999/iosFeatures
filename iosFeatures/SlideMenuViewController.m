@@ -140,7 +140,7 @@ NSArray * menu;
 -(void)logout:(id)sender{
     NSLog(@"This is logout button");
     //[self.revealViewController rightRevealToggle:sender];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Do you really want to logout" preferredStyle:UIActionSheetStyleDefault];
+   UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Do you really want to logout" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         UIStoryboard * loginScreenStoryBoard = [UIStoryboard storyboardWithName:@"LoginStoryBoard" bundle:nil];
         UIViewController *loginViewController = [loginScreenStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
@@ -182,7 +182,9 @@ NSArray * menu;
 NSLog(@"This is Call me button");
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"224-480-9380" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *callAction = [UIAlertAction actionWithTitle:@"Call" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://1-224-480-9380"] options:nil completionHandler:nil];
+       // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://1-224-480-9380"] options:nil completionHandler:nil];
+        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://1-224-480-9380"]];
+        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://1-224-480-9380"] options:@{} completionHandler:nil];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
         

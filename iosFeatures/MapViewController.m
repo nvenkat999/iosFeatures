@@ -122,7 +122,8 @@
 -(void)startNavigation:(id)selector{
     UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"Access alert" message:@"You are leaving from ios features app and opening Maps app, do u wish to continue?" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:destinationPlaceMark];
+       // MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:destinationPlaceMark];
+        MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:(MKPlacemark *)destinationPlaceMark];
         NSMutableDictionary *functions = [[NSMutableDictionary alloc]init];
         [functions setObject:MKLaunchOptionsDirectionsModeDriving forKey:MKLaunchOptionsDirectionsModeKey];
         [mapItem openInMapsWithLaunchOptions:functions];

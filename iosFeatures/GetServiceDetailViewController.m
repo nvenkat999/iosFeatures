@@ -14,7 +14,7 @@
 
 @end
 
-int imageIndex = 2;
+NSInteger imageIndex = 2;
 @implementation GetServiceDetailViewController
 
 - (void)viewDidLoad {
