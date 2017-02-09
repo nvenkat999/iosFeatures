@@ -10,7 +10,7 @@
 		82044B181E1BD7A800FB15F8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82044B171E1BD7A800FB15F8 /* LocalAuthentication.framework */; };
 		82044B1E1E21814500FB15F8 /* KeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 82044B1D1E21814500FB15F8 /* KeyboardToolBar.m */; };
 		8228205F1E36A2E500E608C1 /* AlertControllerMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 8228205E1E36A2E500E608C1 /* AlertControllerMethods.m */; };
-		822820611E37B5BA00E608C1 /* MapsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */; };
+		822820611E37B5BA00E608C1 /* MapStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822820601E37B5BA00E608C1 /* MapStoryBoard.storyboard */; };
 		822820641E37C0BD00E608C1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822820631E37C0BD00E608C1 /* MapViewController.m */; };
 		822820671E37C15000E608C1 /* SearchLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822820661E37C15000E608C1 /* SearchLocationViewController.m */; };
 		822820691E37C5C300E608C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822820681E37C5C300E608C1 /* MapKit.framework */; };
@@ -95,7 +95,7 @@
 		82044B1D1E21814500FB15F8 /* KeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardToolBar.m; sourceTree = "<group>"; };
 		8228205D1E36A2E500E608C1 /* AlertControllerMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerMethods.h; sourceTree = "<group>"; };
 		8228205E1E36A2E500E608C1 /* AlertControllerMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerMethods.m; sourceTree = "<group>"; };
-		822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapsStoryBoard.storyboard; sourceTree = "<group>"; };
+		822820601E37B5BA00E608C1 /* MapStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapStoryBoard.storyboard; sourceTree = "<group>"; };
 		822820621E37C0BD00E608C1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		822820631E37C0BD00E608C1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		822820651E37C15000E608C1 /* SearchLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLocationViewController.h; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 				8289A9C11E16FD8300077EAE /* LaunchScreenStoryBoard.storyboard */,
 				8289A9C21E16FD8300077EAE /* LoginStoryBoard.storyboard */,
 				8289A9C31E16FD8300077EAE /* SlideMenuStoryBoard.storyboard */,
-				822820601E37B5BA00E608C1 /* MapsStoryBoard.storyboard */,
+				822820601E37B5BA00E608C1 /* MapStoryBoard.storyboard */,
 				825155071E3D1CCB00ECFB51 /* AppPurchasesStoryBoard.storyboard */,
 			);
 			name = Views;
@@ -556,7 +556,7 @@
 				8289A8E61E16F81300077EAE /* Assets.xcassets in Resources */,
 				825155111E40C60400ECFB51 /* camera_icon3.png in Resources */,
 				8289A9C61E16FD8300077EAE /* LoginStoryBoard.storyboard in Resources */,
-				822820611E37B5BA00E608C1 /* MapsStoryBoard.storyboard in Resources */,
+				822820611E37B5BA00E608C1 /* MapStoryBoard.storyboard in Resources */,
 				82BA40591E31141A000BDD7F /* photo_close_icon@2x.png in Resources */,
 				82BA405F1E327A1D000BDD7F /* flashing_off@2x.png in Resources */,
 				8289A9C71E16FD8300077EAE /* SlideMenuStoryBoard.storyboard in Resources */,
