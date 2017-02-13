@@ -703,7 +703,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "374"
             endingLineNumber = "374"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -719,7 +719,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "375"
             endingLineNumber = "375"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
             <Locations>
                <Location
@@ -767,7 +767,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "378"
             endingLineNumber = "378"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -783,7 +783,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
             endingLineNumber = "387"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -799,7 +799,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "378"
             endingLineNumber = "378"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2138,11 +2138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/HomeViewController.m"
-            timestampString = "507340592.425852"
+            timestampString = "508369825.598496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "-popToRootViewControllerAnimated"
             landmarkType = "7">
          </BreakpointContent>
@@ -2186,11 +2186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/HomeViewController.m"
-            timestampString = "507340592.425852"
+            timestampString = "508369825.598496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-popToRootViewControllerAnimated"
             landmarkType = "7">
          </BreakpointContent>
@@ -2202,11 +2202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/HomeViewController.m"
-            timestampString = "507340592.425852"
+            timestampString = "508369825.598496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-popToRootViewControllerAnimated"
             landmarkType = "7">
          </BreakpointContent>
@@ -2218,11 +2218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/HomeViewController.m"
-            timestampString = "507340592.425852"
+            timestampString = "508369825.598496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-popToRootViewControllerAnimated"
             landmarkType = "7">
          </BreakpointContent>
@@ -2463,7 +2463,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "376"
             endingLineNumber = "376"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2479,7 +2479,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "384"
             endingLineNumber = "384"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2527,7 +2527,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "383"
             endingLineNumber = "383"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2543,7 +2543,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "386"
             endingLineNumber = "386"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2959,7 +2959,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "379"
             endingLineNumber = "379"
-            landmarkName = "-useTouchID"
+            landmarkName = "-validateTouchID"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3721,11 +3721,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-viewWillAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3737,11 +3737,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3753,39 +3753,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -3801,11 +3769,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3817,11 +3785,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3833,11 +3801,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3849,11 +3817,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3865,11 +3833,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3881,11 +3849,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3897,11 +3865,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/ScanBarcodeViewController.m"
+            timestampString = "508686130.832045"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/ScanBarcodeViewController.m"
+            timestampString = "508686130.832045"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3945,11 +3945,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895923.329126"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-viewWillAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3961,11 +3961,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/ScanBarcodeViewController.m"
-            timestampString = "506895966.952575"
+            timestampString = "508686130.832045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "-captureOutput:didOutputMetadataObjects:fromConnection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4005,15 +4005,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508277479.452868"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4025,7 +4025,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -4073,23 +4073,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-locationManager:didUpdateLocations:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -4105,11 +4089,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-locationManager:didUpdateLocations:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "-startLocationService"
             landmarkType = "7">
          </BreakpointContent>
@@ -4121,11 +4121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-locationManager:didUpdateLocations:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4137,11 +4137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508277479.452868"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4149,15 +4149,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-viewDidAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4169,7 +4169,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -4185,7 +4185,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507180620.506693"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -4201,7 +4201,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507239043.304209"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -4233,11 +4233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508277479.452868"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-sendDestinationLocation:andDestinationAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4249,11 +4249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508277479.452868"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "-sendDestinationLocation:andDestinationAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4313,7 +4313,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507239043.304209"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -4345,11 +4345,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508277479.452868"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "-sendDestinationLocation:andDestinationAddress:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4361,7 +4361,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507239077.492501"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -4377,7 +4377,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "507239115.934264"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -4393,11 +4393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507339136.490915"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "@implementation AppPurchaseViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -4409,27 +4409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507673214.140803"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4441,11 +4425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4457,11 +4441,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4569,11 +4553,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4585,11 +4569,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4601,11 +4585,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4617,11 +4601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508698010.537321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4633,11 +4617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508698010.537321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4649,11 +4633,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508698010.537321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4665,43 +4649,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-buyProductAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-buyProductAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4713,28 +4665,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507675064.4772"
+            timestampString = "508698010.537321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "507670946.975162"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4921,11 +4857,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "508091377.205407"
+            timestampString = "508698010.537321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4937,11 +4873,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/AppPurchaseViewController.m"
-            timestampString = "508091383.667812"
+            timestampString = "508697811.714388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4949,7 +4885,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/GetServiceDetailViewController.m"
@@ -5160,11 +5096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278529.859554"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-viewDidAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -5176,7 +5112,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278539.838839"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -5192,11 +5128,11 @@
                   moduleName = "iosFeatures"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/venkat/Documents/iosFeatures/iosFeatures/MapViewController.m"
-                  timestampString = "508278539.846722"
+                  timestampString = "508433410.243857"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
                   offsetFromSymbolStart = "56">
                </Location>
                <Location
@@ -5207,11 +5143,11 @@
                   moduleName = "iosFeatures"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/venkat/Documents/iosFeatures/iosFeatures/MapViewController.m"
-                  timestampString = "508278539.849664"
+                  timestampString = "508433410.245204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -5224,7 +5160,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278543.136612"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
@@ -5236,11 +5172,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278549.532459"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -5256,7 +5192,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278574.46303"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -5272,55 +5208,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278634.469564"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "-checkAuthorization"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278643.049522"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "-checkAuthorization"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278670.203529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "-checkAuthorization"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278677.020684"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
@@ -5336,11 +5224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278678.946423"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-checkAuthorization"
             landmarkType = "7">
          </BreakpointContent>
@@ -5352,11 +5240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278686.369474"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-checkAuthorization"
             landmarkType = "7">
          </BreakpointContent>
@@ -5368,11 +5256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278690.519779"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "-checkAuthorization"
             landmarkType = "7">
          </BreakpointContent>
@@ -5384,23 +5272,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278696.571016"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "-checkAuthorization"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278722.080381"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "211"
@@ -5412,15 +5284,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/MapViewController.m"
-            timestampString = "508278879.286287"
+            timestampString = "508684460.366887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "-checkAuthorization"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-checkAuthorization"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-checkAuthorization"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-checkAuthorization"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508641684.040295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -5437,14 +5373,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "772"
             endingLineNumber = "772"
-            landmarkName = "-supportedInterfaceOrientations"
-            landmarkType = "7">
+            landmarkName = "@implementation SWRevealViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/GetServiceImageView.m"
@@ -5460,7 +5396,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/GetServiceImageView.m"
@@ -5524,7 +5460,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iosFeatures/GetServiceDetailViewController.m"
@@ -5534,6 +5470,102 @@
             startingLineNumber = "87"
             endingLineNumber = "87"
             landmarkName = "-swipeRecognized:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-createStartingLocationAnnotation"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/MapViewController.m"
+            timestampString = "508684460.366887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-locationManager:didUpdateLocations:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iosFeatures/AppPurchaseViewController.m"
+            timestampString = "508698010.537321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-paymentQueue:updatedTransactions:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

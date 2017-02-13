@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *buyProductButton;
 
 @property (strong, nonatomic) SKProduct *product;
+@property (weak, nonatomic) IBOutlet UIImageView *productImage;
 
 @end

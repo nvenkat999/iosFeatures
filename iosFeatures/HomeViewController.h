@@ -10,6 +10,7 @@
 
 @interface HomeViewController : UITableViewController
 
-@property (weak,nonatomic) IBOutlet UIBarButtonItem *barButton;
+//@property (weak,nonatomic) IBOutlet UIBarButtonItem *barButton;
 
+@property (strong,nonatomic) IBOutlet UIBarButtonItem *barButton2;
 @end

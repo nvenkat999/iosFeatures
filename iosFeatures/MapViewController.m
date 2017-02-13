@@ -34,11 +34,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self.mapView setDelegate:self];
     coder = [[CLGeocoder alloc]init];
     [self checkAuthorization];
     [self startLocationService];
+    
     
 
 }
@@ -49,20 +49,19 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
 
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    
+   
     startRegion.center = startLocation.coordinate;
     startRegion.span.latitudeDelta = 0.05f;
     startRegion.span.longitudeDelta = 0.05f;
     [self.mapView setRegion:startRegion animated:YES];
-    //[self sendDestinationLocation:destinationLocation andDestinationAddress:destinationPlaceMark];
+   
     [self createStartingLocationAnnotation];
-    //[self requestReverseGeoCoding];
     NSLog(@"This is destination %@",destinationPlaceMark);
+    NSLog(@"This is start location %@",startLocation);
 }
 
 
@@ -86,6 +85,7 @@
     if (startLocation == nil){
         startLocation = location;
         [self.locationManager stopUpdatingLocation];
+        //[self createStartingLocationAnnotation];
     }
 }
 
@@ -147,17 +147,21 @@
 }
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    if(startLocation!=nil || destinationLocation !=nil){
    // MKAnnotationView *view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"ann"];
-    MKAnnotationView *view = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"ann"];
+    MKAnnotationView *view = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annn"];
     //view.image = [UIImage imageNamed:@"photo_close_icon"];
     view.enabled = YES;
     view.canShowCallout =YES;
-    view.tintColor = [UIColor redColor];
+    view.tintColor = [UIColor greenColor];
     UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"photo_close_icon"]];
     view.leftCalloutAccessoryView =  image;
     view.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return view;
-}
+    }else{
+    return nil;
+    }
+    }
 
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{

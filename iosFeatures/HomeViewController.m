@@ -20,9 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = NO;
-    _barButton.target = self.revealViewController;
-    _barButton.action = @selector(rightRevealToggle:);
+    //self.navigationController.navigationBarHidden = NO;
+    //_barButton.target = self.revealViewController;
+    //_barButton.action = @selector(rightRevealToggle:);
+    [self createBarButton];
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToRootViewControllerAnimated) name:@"popToRoot" object:nil];
 }
@@ -32,6 +33,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    
+    self.navigationController.navigationBarHidden = NO;
+}
+
+-(void)createBarButton{
+    _barButton2 = [[UIBarButtonItem alloc]initWithTitle:@"Menu2" style:UIBarButtonItemStyleDone target:self.revealViewController action:@selector(rightRevealToggle:)];
+    self.navigationItem.rightBarButtonItem = _barButton2;
+    //[_barButton2 setbac
+    [self.navigationItem setTitle:@"Home"];
+}
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {

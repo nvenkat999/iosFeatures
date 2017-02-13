@@ -62,7 +62,8 @@
     [self.view.layer setMasksToBounds:YES];
     CGRect frame= self.view.frame;
     [previewLayer setFrame:frame];
-    [self.view.layer addSublayer:previewLayer];
+    //[self.view.layer addSublayer:previewLayer];
+    [self.view.layer insertSublayer:previewLayer atIndex:0];
 
     _deviceOutput = [[AVCaptureMetadataOutput alloc]init];
     [_session addOutput:_deviceOutput];
