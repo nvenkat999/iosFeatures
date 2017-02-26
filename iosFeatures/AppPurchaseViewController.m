@@ -38,11 +38,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
     self.productDescription.alpha = 0;
     self.productTitle.alpha = 0;
     self.buyProductButton.alpha = 0;
     self.productImage.alpha = 0;
+    self.priceLabel.alpha =0;
+    self.priceObject.alpha =0;
 }
 
 
@@ -83,16 +84,17 @@
         self.productTitle.alpha = 1;
         self.buyProductButton.alpha = 1;
         self.productImage.alpha = 1;
+        self.priceLabel.alpha =1;
+        self.priceObject.alpha =1;
     });
     NSArray *productsArray = response.products;
     if (productsArray.count != 0) {
         _product = productsArray[0];
         _productTitle.text = _product.localizedTitle;
         _productDescription.text = _product.localizedDescription;
-         NSNumber *price=_product.price;
-        NSLog(@"This is price %@",price);
-        NSNumber *localPrice = _product.price;
-        NSLog(@"This is price %@",localPrice);
+        NSString *priceString =[NSString stringWithFormat:@"%@ $",_product.price];
+        self.priceObject.text = priceString;
+        NSLog(@"This is price %@",priceString);
         
     }else{
         NSLog(@"No products available");

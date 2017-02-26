@@ -102,11 +102,11 @@
     }else{
         
         fetchedResult = [fetchedObjects objectAtIndex:0];
-        NSString * text= [fetchedResult valueForKey:@"username"];
+        NSString * usernameString= [fetchedResult valueForKey:@"username"];
         NSData *dates=[fetchedResult valueForKey:@"lastLoggedIn"];
         NSNumber *autologintext = [fetchedResult valueForKey:@"autoLogin"];
         NSNumber *useTouchIDtext = [fetchedResult valueForKey:@"enableTouchID"];
-        NSLog(@"%@ logged in at %@ and autologin is %@ and touchID is %@",text,dates,autologintext,useTouchIDtext);
+        NSLog(@"%@ logged in at %@ and autologin is %@ and touchID is %@",usernameString,dates,autologintext,useTouchIDtext);
         NSLog(@"this is fetched result %@",fetchedResult);
     }
     

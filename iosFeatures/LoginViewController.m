@@ -231,9 +231,10 @@
         [LearningMethods showUIAlertMessage:@"Invalid username or password" andWithTitle:@"Error" andInView:self.navigationController];
     }
     else{
-        UserProfile *getLoginUserDate = [_loginUserData objectAtIndex:0];
-    if ([getLoginUserDate.Password isEqualToString:_passwordField.text]){
+        UserProfile *getLoginUserData = [_loginUserData objectAtIndex:0];
+    if ([getLoginUserData.Password isEqualToString:_passwordField.text]){
         NSLog(@"Yeppie, i logged in");
+        //getLoginUserData.Username
     }
     else{
          [LearningMethods showUIAlertMessage:@"Wrong password,please try again" andWithTitle:@"Error" andInView:self.navigationController];
@@ -268,7 +269,7 @@
             [hud hideAnimated:YES];
         });
     });
-}
+}   
 
 
 /*

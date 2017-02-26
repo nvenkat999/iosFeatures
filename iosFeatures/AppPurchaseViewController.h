@@ -18,5 +18,7 @@
 
 @property (strong, nonatomic) SKProduct *product;
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceObject;
 
 @end

@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface UserProfileViewController : UITableViewController
+@interface UserProfileViewController : UITableViewController<UITextFieldDelegate, UITextViewDelegate>
+
+@property (weak,nonatomic) UITextField *activeTextField;
+@property (strong, nonatomic) NSArray *inputFields;
+
+@property (strong, nonatomic) NSArray *inputFieldsDelegates;
+
+@property (strong, nonatomic) NSMutableArray * loginUserData;
+
+@property (strong, nonatomic) NSString *usernameString;
 
 @end

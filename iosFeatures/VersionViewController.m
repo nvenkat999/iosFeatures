@@ -10,6 +10,7 @@
 
 @interface VersionViewController ()
 - (IBAction)doneButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end
 
@@ -17,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString * appVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    _versionLabel.text = [NSString stringWithFormat:@"Version:%@",appVersionString];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +38,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 - (IBAction)doneButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

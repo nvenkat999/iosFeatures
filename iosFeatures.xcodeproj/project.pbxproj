@@ -23,6 +23,7 @@
 		8251550F1E40BF6800ECFB51 /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8251550E1E40BF6800ECFB51 /* camera-icon.png */; };
 		825155111E40C60400ECFB51 /* camera_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155101E40C60400ECFB51 /* camera_icon3.png */; };
 		825155131E40C66300ECFB51 /* camera-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155121E40C66300ECFB51 /* camera-icon2.png */; };
+		826A601E1E62A2EE0060BAEC /* help.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 826A601D1E62A2EE0060BAEC /* help.pdf */; };
 		8289A8D81E16F81300077EAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8D71E16F81300077EAE /* main.m */; };
 		8289A8DB1E16F81300077EAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DA1E16F81300077EAE /* AppDelegate.m */; };
 		8289A8DE1E16F81300077EAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DD1E16F81300077EAE /* ViewController.m */; };
@@ -111,6 +112,7 @@
 		8251550E1E40BF6800ECFB51 /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon.png"; path = "../../../Downloads/camera-icon.png"; sourceTree = "<group>"; };
 		825155101E40C60400ECFB51 /* camera_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_icon3.png; path = ../../../Downloads/camera_icon3.png; sourceTree = "<group>"; };
 		825155121E40C66300ECFB51 /* camera-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon2.png"; path = "../../../Downloads/camera-icon2.png"; sourceTree = "<group>"; };
+		826A601D1E62A2EE0060BAEC /* help.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = help.pdf; path = ../../../Desktop/help.pdf; sourceTree = "<group>"; };
 		8289A8D31E16F81300077EAE /* iosFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8289A8D71E16F81300077EAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8289A8D91E16F81300077EAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -230,6 +232,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		826A601A1E629FD60060BAEC /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				826A601D1E62A2EE0060BAEC /* help.pdf */,
+			);
+			name = Docs;
+			sourceTree = "<group>";
+		};
 		8289A8CA1E16F81300077EAE = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +285,7 @@
 		8289A8D61E16F81300077EAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				826A601A1E629FD60060BAEC /* Docs */,
 				82BA40571E31137F000BDD7F /* Images */,
 				8289A8D71E16F81300077EAE /* main.m */,
 			);
@@ -550,6 +561,7 @@
 				8289A9C41E16FD8300077EAE /* HomeScreenStoryBoard.storyboard in Resources */,
 				82BA40611E327A1D000BDD7F /* switch_camera@2x.png in Resources */,
 				825155131E40C66300ECFB51 /* camera-icon2.png in Resources */,
+				826A601E1E62A2EE0060BAEC /* help.pdf in Resources */,
 				8289A8E61E16F81300077EAE /* Assets.xcassets in Resources */,
 				825155111E40C60400ECFB51 /* camera_icon3.png in Resources */,
 				8289A9C61E16FD8300077EAE /* LoginStoryBoard.storyboard in Resources */,

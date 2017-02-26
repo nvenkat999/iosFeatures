@@ -13,4 +13,5 @@
 
 @property (strong,nonatomic) IBOutlet NSManagedObject * fetchedResult;
 
+
 @end

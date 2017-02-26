@@ -87,7 +87,16 @@
     if([self validateFields]){
         NSString * sqlStatement = [NSString stringWithFormat:@"INSERT INTO Users (Username,Password,FirstName,LastName,PhoneNo,EmailID) VALUES (\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\")", self.UsernameField.text,self.passwordField.text,self.firstNameField.text,self.lastNameField.text,self.phoneNoField.text,self.emailField.text];
         [SqlLiteDatabaseMethods InsertData:sqlStatement andSuccessMessage:@"insert data successfull" andFailureMessage:@"Did not insert data"];
-        [self.navigationController popViewControllerAnimated:YES];
+
+        //[self.navigationController popViewControllerAnimated:YES];
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert!" message:@"User details saved" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:Nil];
     }
     
     
@@ -420,5 +429,11 @@
 }
 */
 
+-(void)showUIAlertMessage:(NSString *)message andWithTitle:(NSString *)title {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){}];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:Nil];
+}
 
 @end

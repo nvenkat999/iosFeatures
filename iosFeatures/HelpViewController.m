@@ -10,6 +10,7 @@
 
 @interface HelpViewController ()
 - (IBAction)doneBarButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIWebView *helpView;
 
 @end
 
@@ -18,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
+    NSURL *helpURL = [[NSBundle mainBundle] URLForResource:@"help" withExtension:@"pdf"];
+    NSURLRequest * request = [NSURLRequest requestWithURL:helpURL];
+    [_helpView loadRequest:request];
     // Do any additional setup after loading the view.
 }
 
