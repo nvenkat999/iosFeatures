@@ -21,8 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _serviceList = @[@"Movies",@"Albums",@"Free E Books",@"Paid E Books",@"Free Applications",@"Paid Applications",@"Music Videos"];;
+        _serviceList = @[@"Movies",@"Albums",@"Free E Books",@"Paid E Books",@"Free Applications",@"Paid Applications",@"Music Videos"];;
     
     _barButton.target = self.revealViewController;
     _barButton.action = @selector(rightRevealToggle:);

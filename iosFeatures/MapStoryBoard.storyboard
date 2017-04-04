@@ -37,13 +37,13 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gL2-aD-IXu">
-                                <rect key="frame" x="36" y="64" width="248" height="101.5"/>
+                                <rect key="frame" x="36" y="72" width="248" height="101.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-0t-R6q">
-                                <rect key="frame" x="169" y="277" width="130" height="40"/>
+                                <rect key="frame" x="169" y="285" width="130" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5VF-wX-Rdw"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El5-CK-gf6">
-                                <rect key="frame" x="16" y="277" width="130" height="40"/>
+                                <rect key="frame" x="16" y="285" width="130" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="uHw-ki-qg5"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter destination" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJj-vt-lPC">
-                                <rect key="frame" x="36" y="201.5" width="248" height="49.5"/>
+                                <rect key="frame" x="36" y="209.5" width="248" height="49.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QnR-03-oM2"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                             <constraint firstItem="El5-CK-gf6" firstAttribute="width" secondItem="c9C-KD-4Gs" secondAttribute="width" multiplier="0.406" id="cGm-MV-8jg"/>
                             <constraint firstItem="NO4-mu-OtI" firstAttribute="top" secondItem="EXU-b8-Evy" secondAttribute="bottom" id="fet-vB-Fpq"/>
                             <constraint firstItem="ZIa-0t-R6q" firstAttribute="width" secondItem="c9C-KD-4Gs" secondAttribute="width" multiplier="0.406" id="qA6-bT-jx6"/>
-                            <constraint firstItem="gL2-aD-IXu" firstAttribute="top" secondItem="NO4-mu-OtI" secondAttribute="bottom" id="t7M-eY-wVH"/>
+                            <constraint firstItem="gL2-aD-IXu" firstAttribute="top" secondItem="NO4-mu-OtI" secondAttribute="bottom" constant="8" id="t7M-eY-wVH"/>
                         </constraints>
                     </view>
                     <connections>
@@ -123,14 +123,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-Xe-p4y">
-                                <rect key="frame" x="0.0" y="45" width="320" height="435"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-Xe-p4y">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="h5e-Xe-p4y" secondAttribute="trailing" constant="-16" id="9zS-iu-yHo"/>
-                            <constraint firstItem="h5e-Xe-p4y" firstAttribute="top" secondItem="2rb-Wq-F1i" secondAttribute="bottom" constant="-19" id="IYQ-3G-bNx"/>
+                            <constraint firstItem="h5e-Xe-p4y" firstAttribute="top" secondItem="2rb-Wq-F1i" secondAttribute="bottom" id="IYQ-3G-bNx"/>
                             <constraint firstItem="h5e-Xe-p4y" firstAttribute="leading" secondItem="t0C-fi-Xn4" secondAttribute="leadingMargin" constant="-16" id="VJn-2I-Yjq"/>
                             <constraint firstItem="jdO-Dr-GoJ" firstAttribute="top" secondItem="h5e-Xe-p4y" secondAttribute="bottom" id="dqW-BC-Gx1"/>
                         </constraints>

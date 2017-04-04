@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rtz-Ml-nho">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cQH-PK-R8h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="1KJ-w4-fVE">
-            <objects>
-                <navigationController id="rtz-Ml-nho" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Taw-Jz-1M9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cQH-PK-R8h" kind="relationship" relationship="rootViewController" id="TQa-gX-tXF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M2t-SO-JVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-863" y="-83"/>
-        </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="5Mk-7n-Cut">
             <objects>
@@ -37,15 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Launching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoc-WO-eb1">
-                                <rect key="frame" x="35" y="106" width="296" height="359"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="uRn-yv-1SF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRn-yv-1SF" firstAttribute="centerX" secondItem="zoS-66-dqZ" secondAttribute="centerX" id="Er2-ws-f1n"/>
+                            <constraint firstItem="uRn-yv-1SF" firstAttribute="height" secondItem="zoS-66-dqZ" secondAttribute="height" id="NG3-Nc-RFk"/>
+                            <constraint firstItem="uRn-yv-1SF" firstAttribute="width" secondItem="zoS-66-dqZ" secondAttribute="width" id="Zd2-p5-YOV"/>
+                            <constraint firstItem="uRn-yv-1SF" firstAttribute="centerY" secondItem="zoS-66-dqZ" secondAttribute="centerY" id="ioC-aC-aI9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YJz-Za-Apj"/>
                 </viewController>
@@ -54,4 +40,7 @@
             <point key="canvasLocation" x="-15" y="-46"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appIcon.png" width="1024" height="1024"/>
+    </resources>
 </document>

@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
     [SqlLiteDatabaseMethods CreateDBandTables];
     [self fetchResults];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popToRootViewControllerAnimated) name:@"popToRoot" object:nil];
@@ -54,8 +55,8 @@
         UINavigationController *loginController=[aLoginStoryBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
         //loginController.useTouchID= @"YES";
         
-        //[self presentViewController:loginController animated:YES completion:nil];
-        [self.navigationController pushViewController:loginController animated:YES];
+        [self presentViewController:loginController animated:YES completion:nil];
+        //[self.navigationController pushViewController:loginController animated:YES];
         
     //[self.navigationController presentViewController:loginController animated:YES completion:nil];
     }

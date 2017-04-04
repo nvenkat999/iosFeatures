@@ -53,8 +53,6 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Used to take Photos</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow app to use location services even when you are not using app</string>
 	<key>NSLocationUsageDescription</key>
 	<string>Allow app to use location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

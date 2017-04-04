@@ -15,7 +15,7 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,sendDestinationData>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (retain,nonatomic) CLLocationManager *locationManager;
+@property (strong,nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) CLLocation * startLocation;
 @property (nonatomic) MKCoordinateRegion startRegion;
 @property (nonatomic) CLLocation * destinationLocation;

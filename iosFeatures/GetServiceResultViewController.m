@@ -24,7 +24,12 @@
     
     
     [super viewDidLoad];
+    _searchResultsBar.delegate = self;
+    self.title = _OptionSelected;
+
     [self maintainThreads];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(KeyboardHidden:) name:UIKeyboardDidHideNotification object:nil];
     
 }
 
@@ -69,16 +74,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_serviceResultsData count];
+    return [_displayData count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if(indexPath.row ==0){
+//        SearchBarCellClass  *searchCell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
+//        searchCell.searchResultsBar.delegate = self;
+//            return searchCell;
+//        
+//    }
+    
     GetServiceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceResultsCell" forIndexPath:indexPath];
-    GetServiceResultsObject *individaulObject = [_serviceResultsData objectAtIndex:indexPath.row];
+    GetServiceResultsObject *individualObject = [_displayData objectAtIndex:(indexPath.row)];
    // cell.textLabel.text = individaulObject.Title;
-    cell.cellTitle.text = individaulObject.Title;
-    NSString *strImageData= individaulObject.Image[0];
+    cell.cellTitle.text = individualObject.Title;
+    NSString *strImageData= individualObject.Image[0];
    NSData * imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:strImageData]];
     //NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:strImageData]];
     //NSData * imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:individaulObject.Image[0]]];
@@ -92,7 +104,7 @@
         GetServiceDetailViewController *detailView = [segue destinationViewController];
         NSIndexPath *indexPath = [self.atableView indexPathForSelectedRow];
         NSInteger row = [indexPath row];
-        detailView.detailData = @[_serviceResultsData[row]];
+        detailView.detailData = @[_displayData[row]];
     }
 }
 
@@ -160,6 +172,8 @@
         
         
         [_serviceResultsData addObject:[[GetServiceResultsObject alloc]initWithTitle:objTitle andPrice:objPrice andCategory:objCategory andArtist:objArtist andImage: (NSMutableArray *)objArrayImages  andLink:objLink]];
+        _displayData = [[NSMutableArray alloc]initWithArray:_serviceResultsData];
+
         
     }
     //NSLog(@"This is service result %@",_serviceResultsData);
@@ -238,50 +252,67 @@
 }
 
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
 
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
+    if ([searchText length] ==0) {
+        [_displayData removeAllObjects];
+        [_displayData addObjectsFromArray:_serviceResultsData];
+    } else {
+        [_displayData removeAllObjects];
+        
+        for (int i=0; i< _serviceResultsData.count; i++) {
+            GetServiceResultsObject *searchedObject = [_serviceResultsData objectAtIndex:i];
+            NSString *searchedTitle =  searchedObject.Title;
+            NSRange r = [searchedTitle rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (r.location !=NSNotFound) {
+                [_displayData addObject:searchedObject];
+            }
+            
+        }
+    }
+    //NSInteger count = _displayData.count;
+    [_atableView reloadData];
+    
+    
+}
 
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+//This method is to remove kepboard once we click search button
+-(void)searchBarSearchButtonClicked:(UISearchBar *)asearchBar{
+    
+    [_searchResultsBar resignFirstResponder];
+}
 
+ //This method is to resize my table view so that when keyboard is present the view shrinks and the cell will not be shown below the keyboard
+
+-(void)KeyboardShown:(NSNotification*)note {
+    
+    CGRect KeyboardFrame;
+    [[[note userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey]getValue:&KeyboardFrame];
+    CGRect tableViewFrame = _atableView.frame;
+    tableViewFrame.size.height -= KeyboardFrame.size.height;
+    [_atableView setFrame:tableViewFrame];
+    
+}
+
+// This method is to resize my table view so that when keyboard is removed the view goes to original size
+-(void)KeyboardHidden:(NSNotification *)note{
+    
+    [_atableView setFrame:self.view.bounds];
+}
+
+
+
+@end
+
+@implementation SearchBarCellClass
+
+//-(void)searchBarSearchButtonClicked:(UISearchBar *)asearchBar{
+//    
+//    [_searchResultsBar resignFirstResponder];
+//}
 
 
 @end

@@ -24,6 +24,7 @@
 		825155111E40C60400ECFB51 /* camera_icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155101E40C60400ECFB51 /* camera_icon3.png */; };
 		825155131E40C66300ECFB51 /* camera-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 825155121E40C66300ECFB51 /* camera-icon2.png */; };
 		826A601E1E62A2EE0060BAEC /* help.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 826A601D1E62A2EE0060BAEC /* help.pdf */; };
+		826A60201E634F230060BAEC /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 826A601F1E634F230060BAEC /* appIcon.png */; };
 		8289A8D81E16F81300077EAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8D71E16F81300077EAE /* main.m */; };
 		8289A8DB1E16F81300077EAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DA1E16F81300077EAE /* AppDelegate.m */; };
 		8289A8DE1E16F81300077EAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8289A8DD1E16F81300077EAE /* ViewController.m */; };
@@ -113,6 +114,7 @@
 		825155101E40C60400ECFB51 /* camera_icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_icon3.png; path = ../../../Downloads/camera_icon3.png; sourceTree = "<group>"; };
 		825155121E40C66300ECFB51 /* camera-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon2.png"; path = "../../../Downloads/camera-icon2.png"; sourceTree = "<group>"; };
 		826A601D1E62A2EE0060BAEC /* help.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = help.pdf; path = ../../../Desktop/help.pdf; sourceTree = "<group>"; };
+		826A601F1E634F230060BAEC /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appIcon.png; path = ../../../Downloads/appicons/appIcon.png; sourceTree = "<group>"; };
 		8289A8D31E16F81300077EAE /* iosFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8289A8D71E16F81300077EAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8289A8D91E16F81300077EAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		82BA40571E31137F000BDD7F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				826A601F1E634F230060BAEC /* appIcon.png */,
 				8299CE191E521A3400F4B763 /* noimage.jpg */,
 				825155121E40C66300ECFB51 /* camera-icon2.png */,
 				825155101E40C60400ECFB51 /* camera_icon3.png */,
@@ -572,6 +575,7 @@
 				8299CE1A1E521A3400F4B763 /* noimage.jpg in Resources */,
 				8251550F1E40BF6800ECFB51 /* camera-icon.png in Resources */,
 				8289A9C51E16FD8300077EAE /* LaunchScreenStoryBoard.storyboard in Resources */,
+				826A60201E634F230060BAEC /* appIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

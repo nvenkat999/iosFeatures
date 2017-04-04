@@ -143,7 +143,7 @@
         //[self.navigationController popViewControllerAnimated:YES];
         
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert!" message:@"User details saved" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert!" message:@"User details updated" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
             [self dismissViewControllerAnimated:YES completion:nil];
         }];
@@ -315,6 +315,25 @@
         _usernameString= [fetchedResult valueForKey:@"username"];
     }
     
+}
+
+
+-(void) previousNextButtons:(id)sender{
+    NSUInteger indexOfActiveTextFiled = [self.inputFields indexOfObjectPassingTest:^BOOL(UITextField *textField, NSUInteger idx, BOOL* stop) {
+        return textField.isFirstResponder;
+    }];
+    switch([(UISegmentedControl *)sender selectedSegmentIndex]){
+        case 0:
+            if (indexOfActiveTextFiled > 0) {
+                [self.inputFields[indexOfActiveTextFiled - 1] becomeFirstResponder];
+            }
+            break;
+        case 1:
+            if (indexOfActiveTextFiled < self.inputFields.count-1) {
+                [self.inputFields[indexOfActiveTextFiled + 1] becomeFirstResponder];
+            }
+            break;
+    }
 }
 
 @end

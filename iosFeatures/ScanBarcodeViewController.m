@@ -43,6 +43,7 @@
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
+
 -(void)viewWillAppear:(BOOL)animated{
 
     _session = [[AVCaptureSession alloc]init];

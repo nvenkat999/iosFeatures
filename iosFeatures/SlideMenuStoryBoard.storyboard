@@ -92,7 +92,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="noimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-vV-f7w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon.png" highlightedImage="appIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-vV-f7w">
                                 <rect key="frame" x="94" y="154" width="187.5" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="119" id="RIk-ar-Mup"/>
@@ -509,6 +509,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="noimage.jpg" width="275" height="275"/>
+        <image name="appIcon.png" width="1024" height="1024"/>
     </resources>
 </document>

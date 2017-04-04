@@ -40,7 +40,6 @@
 //    _captureImageButton.layer.cornerRadius = width ;
 //    _captureImageButton.opaque = false;
     
-    // Do any additional setup after loading the view.
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -174,11 +173,13 @@
 
 -(void)startImageView{
     CGRect imageFrame = _captureImageView.frame;
+    //CGRect imageFrame = self.view.frame;
     UIButton *cancelImageButton = [self createButton:CGRectMake(8, 8, 50, 50) image: @"photo_close_icon" action:@selector(closeImageView:) parentView:_captureImageView];
     [cancelImageButton setUserInteractionEnabled:true];
-    UIButton *saveImageButton = [self createButton:CGRectMake(8, imageFrame.size.height-58, 50, 30) image: @"" action:@selector(saveImageAction:) parentView:_captureImageView];
+    UIButton *saveImageButton = [self createButton:CGRectMake(8, imageFrame.size.height-38, 50, 30) image: @"" action:@selector(saveImageAction:) parentView:_captureImageView];
     [saveImageButton setTitle:@"Save" forState:UIControlStateNormal];
-    UIButton *sendImageButton = [self createButton:CGRectMake(imageFrame.size.width-48, imageFrame.size.height-58, 50, 30) image: @"" action:@selector(sendImageAction:) parentView:_captureImageView];
+    UIButton *sendImageButton = [self createButton:CGRectMake(imageFrame.size.width-48, imageFrame.size.height-38, 50, 30) image: @"" action:@selector(sendImageAction:) parentView:_captureImageView];
+    //CGRect sendButtonFrame = sendImageButton.frame;
     [sendImageButton setTitle:@"Send" forState:UIControlStateNormal];
 }
 

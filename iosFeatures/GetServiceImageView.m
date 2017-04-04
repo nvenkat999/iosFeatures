@@ -35,8 +35,9 @@
 -(void)LoadSubImages{
     
     for (int i=0; i< _fullImageArray.count; i++) {
-        int xCoordinate = (30+(i*45));
-        int yCoordinate =500;
+        int xCoordinate = (100+(i*45));
+        CGRect viewFrame = self.view.frame;
+        int yCoordinate =viewFrame.size.height-60;
         
         _subImageView = [[UIImageView alloc]init];
         [_subImageView setFrame:CGRectMake(xCoordinate, yCoordinate, 40, 40)];

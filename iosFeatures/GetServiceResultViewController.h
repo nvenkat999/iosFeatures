@@ -15,13 +15,22 @@
 @property (nonatomic,strong) NSMutableArray *displayData;
 @property (nonatomic, strong) NSString * OptionSelected;
 @property (nonatomic, strong) NSTimer *times;
-@property (nonatomic, strong) IBOutlet UISearchBar *testSearchBar;
+
 @property (nonatomic, strong) IBOutlet UITableView *atableView;
+
 
 @property (nonatomic,strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic,strong) UIView *activityIndicatorView;
 @property (nonatomic,strong) UIView *backGroundView;
 @property (nonatomic,strong) UILabel *testLabel;
 
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchResultsBar;
+@end
+
+
+@interface SearchBarCellClass : UITableViewCell
+
+//@property (weak, nonatomic) IBOutlet UISearchBar *searchResultsBar;
 
 @end
